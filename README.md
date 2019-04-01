@@ -1,4 +1,7 @@
 # Hashtags em redes sociais relacionadas a ética na inteligência artificial | Etica.AI
+
+[![A Organização Etica.AI](img/banner-temporary.png)](https://hashtags-pt.etica.ai/)
+
 **Lista de termos chave ("hashtags") para procurar conteúdo relacionado a ética
 na inteligência artificial em redes sociais voltados para uso pelos de falantes
 de português e curadoria de [Etica.AI](https://pt.etica.ai).**
