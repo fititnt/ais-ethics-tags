@@ -134,3 +134,11 @@ trabalho) ou conceitos técnicos.
   [Youtube](https://www.youtube.com/results?search_query=%23HumanRights)**
 
 ---
+
+# License
+
+[![Public Domain](img/public-domain.png)](UNLICENSE)
+
+To the extent possible under law, [Emerson Rocha](https://github.com/fititnt)
+has waived all copyright and related or neighboring rights to this work to
+[Public Domain](UNLICENSE).
