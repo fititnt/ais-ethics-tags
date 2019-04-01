@@ -1,6 +1,10 @@
-# Hashtags em redes sociais relacionadas a ética na inteligência artificial | Etica.AI
+# A/IS Ethics tags via Etica.AI
 
-[![A Organização Etica.AI](img/banner-temporary.png)](https://hashtags-pt.etica.ai/)
+[![A/IS Ethics tags via Etica.AI](img/banner-temporary.png)](https://hashtags-pt.etica.ai/)
+
+![English Key terms](img/badges/language-en.svg) ![Palavras-chave em português](img/badges/language-pt.svg)
+
+<!-- ![Status: Work in Progress](img/badges/status-work-in-progress.svg)-->
 
 **Lista de termos chave ("hashtags") para procurar conteúdo relacionado a ética
 na inteligência artificial em redes sociais voltados para uso pelos de falantes
@@ -19,6 +23,7 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
         - [AI](#ai)
         - [Artificial Intelligence](#artificial-intelligence)
         - [Human Rights](#human-rights)
+        - [Technological unemployment](#technological-unemployment)
 
 <!-- /TOC -->
 
@@ -135,6 +140,20 @@ trabalho) ou conceitos técnicos.
   [Reddit](https://www.reddit.com/search?q=%23HumanRights) \|
   [Twitter](https://twitter.com/search?q=%23HumanRights) \|
   [Youtube](https://www.youtube.com/results?search_query=%23HumanRights)**
+
+#### Technological unemployment
+- Wikipedia: <em lang="en">[Technological unemployment](https://en.wikipedia.org/wiki/Technological_unemployment) <sup>(en)</sup></em> 
+- Wikidata: [Q7692538](https://www.wikidata.org/wiki/Q7692538)
+- :mag: :
+  **[Facebook](https://www.facebook.com/search/posts/?q=%23TechnologicalUnemployment) \|
+  [GitHub](https://github.com/topics/technological-unemployment) \|
+  [Instagram](https://www.instagram.com/explore/tags/technologicalunemployment) \|
+  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23TechnologicalUnemployment) \|
+  [Medium](https://medium.com/search?q=%23TechnologicalUnemployment) \|
+  [Pinterest](https://pinterest.com/search/pins/?q=%23TechnologicalUnemployment) \|
+  [Reddit](https://www.reddit.com/search?q=%23TechnologicalUnemployment) \|
+  [Twitter](https://twitter.com/search?q=%23TechnologicalUnemployment) \|
+  [Youtube](https://www.youtube.com/results?search_query=%23TechnologicalUnemployment)**
 
 ---
 
