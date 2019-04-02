@@ -1,5 +1,7 @@
 # Ignore this file, used only for copy and paste
 
+- Online sort for lists: <https://www.online-utility.org/text/sort.jsp>
+
 #### PalavraPalavra Palavra1
 - Wikipedia: <em lang="pt">[PalavraPalavra Palavra1](https://en.wikipedia.org/wiki/PalavraPalavra_Palavra1) <sup>(pt)</sup></em> 
 - Wikidata: [Q7777777777777777](https://www.wikidata.org/wiki/Q7777777777777777)

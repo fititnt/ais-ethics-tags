@@ -2,34 +2,62 @@
 
 [![A/IS Ethics tags via Etica.AI](img/banner-tags.png)](https://tags.etica.ai)
 
-![English Key terms](img/badges/language-en.svg) ![Palavras-chave em português](img/badges/language-pt.svg)
+[![English Key terms](img/badges/language-en.svg)](#english) [![Palavras-chave em português](img/badges/language-pt.svg)](#português)
 
 <!-- ![Status: Work in Progress](img/badges/status-work-in-progress.svg)-->
 
+**Etica.AI Etikedoj.**
+
+<!--
 **Lista de termos chave ("hashtags") para procurar conteúdo relacionado a ética
 na inteligência artificial em redes sociais voltados para uso pelos de falantes
 de português e curadoria de [Etica.AI](https://pt.etica.ai).**
+-->
 
-# Índice de Conteúdo
+
+# Enhavtabelo
 
 <!-- TOC depthFrom:2 depthTo:5 -->
 
-- [Hashtags](#hashtags)
+- [Lingvo](#lingvo)
+    - [English](#english)
+    - [Español](#español)
     - [Português](#português)
-        - [Armas Autônomas Letais](#armas-autônomas-letais)
-        - [Direitos Humanos](#direitos-humanos)
-        - [IA](#ia)
-        - [Inteligência Artificial](#inteligência-artificial)
-    - [Internacional](#internacional)
-        - [AI](#ai)
-        - [Artificial Intelligence](#artificial-intelligence)
-        - [Human Rights](#human-rights)
-        - [Lethal autonomous weapon](#lethal-autonomous-weapon)
-        - [Technological unemployment](#technological-unemployment)
+- [Etikedoj](#etikedoj)
+    - [AI](#ai)
+    - [Armas Autônomas Letais](#armas-autônomas-letais)
+    - [Artificial Intelligence](#artificial-intelligence)
+    - [Direitos Humanos](#direitos-humanos)
+    - [Human Rights](#human-rights)
+    - [IA](#ia)
+    - [Inteligência Artificial](#inteligência-artificial)
+    - [Lethal autonomous weapon](#lethal-autonomous-weapon)
+    - [Technological unemployment](#technological-unemployment)
 
 <!-- /TOC -->
 
-## Hashtags
+## Lingvo
+
+### English
+
+- [AI](#ai)
+- [Artificial Intelligence](#artificial-intelligence)
+- [Human Rights](#human-rights)
+- [Lethal autonomous weapon](#lethal-autonomous-weapon)
+- [Technological unemployment](#technological-unemployment)
+
+### Español
+
+<em lang="es">Por favor espere</em>.
+
+### Português
+
+- [Armas Autônomas Letais](#armas-autônomas-letais)
+- [Direitos Humanos](#direitos-humanos)
+- [IA](#ia)
+- [Inteligência Artificial](#inteligência-artificial)
+
+## Etikedoj
 <!--
 
 - https://www.dreamgrow.com/top-15-most-popular-social-networking-sites/
@@ -40,79 +68,10 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 -->
 
-### Português
 
-#### Armas Autônomas Letais
-- Wikipedia: <em lang="pt">[Armas Autônomas Letais](https://pt.wikipedia.org/wiki/Armas_Aut%C3%B4nomas_Letais) <sup>(pt)</sup></em> 
-- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
-- :mag: :
-  **[Facebook](https://www.facebook.com/search/posts/?q=%23ArmasAutonomasLetais) \|
-  [GitHub](https://github.com/topics/armas-autonomas-letais) \|
-  [Instagram](https://www.instagram.com/explore/tags/ArmasAutonomasLetais) \|
-  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23ArmasAutonomasLetais) \|
-  [Medium](https://medium.com/search?q=%23ArmasAutonomasLetais) \|
-  [Pinterest](https://pinterest.com/search/pins/?q=%23ArmasAutonomasLetais) \|
-  [Reddit](https://www.reddit.com/search?q=%23ArmasAutonomasLetais) \|
-  [Twitter](https://twitter.com/search?q=%23ArmasAutonomasLetais) \|
-  [Youtube](https://www.youtube.com/results?search_query=%23ArmasAutonomasLetais)**
-
-#### Direitos Humanos
-- Wikipedia: <em lang="pt">[Direitos Humanos](https://pt.wikipedia.org/wiki/Direitos_humanos) <sup>(pt)</sup></em> 
-- Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
-- :mag: :
-  **[Facebook](https://www.facebook.com/search/posts/?q=%23direitoshumanos) \|
-  [GitHub](https://github.com/topics/direitos-humanos) \|
-  [Instagram](https://www.instagram.com/explore/tags/DireitosHumanos) \|
-  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23direitoshumanos) \|
-  [Medium](https://medium.com/search?q=%23direitoshumanos) \|
-  [Pinterest](https://pinterest.com/search/pins/?q=%23direitoshumanos) \|
-  [Reddit](https://www.reddit.com/search?q=%23direitoshumanos) \|
-  [Twitter](https://twitter.com/search?q=%23direitoshumanos) \|
-  [Youtube](https://www.youtube.com/results?search_query=%23direitoshumanos)**
-
----
-
-#### IA
-> - [Inteligência Artificial](#artificial-intelligence)
-
-- :mag: :
-  **[Facebook](https://www.facebook.com/search/posts/?q=%23IA) \|
-  [GitHub](https://github.com/topics/ia) \|
-  [Instagram](https://www.instagram.com/explore/tags/ia) \|
-  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23IA) \|
-  [Medium](https://medium.com/search?q=%23IA) \|
-  [Pinterest](https://pinterest.com/search/pins/?q=%23IA) \|
-  [Reddit](https://www.reddit.com/search?q=%23IA) \|
-  [Twitter](https://twitter.com/search?q=%23IA) \|
-  [Youtube](https://www.youtube.com/results?search_query=%23IA)**
-
----
-
-#### Inteligência Artificial
-- Wikipedia: <em lang="pt">[Inteligência artificial](https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial) <sup>(pt)</sup></em> 
-- Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
-- :mag: :
-  **[Facebook](https://www.facebook.com/search/posts/?q=%23InteligenciaArtificial) \|
-  [GitHub](https://github.com/topics/inteligencia-artificial) \|
-  [Instagram](https://www.instagram.com/explore/tags/inteligenciaartificial) \|
-  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23InteligenciaArtificial) \|
-  [Medium](https://medium.com/search?q=%23InteligenciaArtificial) \|
-  [Pinterest](https://pinterest.com/search/pins/?q=%23InteligenciaArtificial) \|
-  [Reddit](https://www.reddit.com/search?q=%23InteligenciaArtificial) \|
-  [Twitter](https://twitter.com/search?q=%23InteligenciaArtificial) \|
-  [Youtube](https://www.youtube.com/results?search_query=%23InteligenciaArtificial)**
-
----
-
-### Internacional
-Hashtags _internacionais_ são termos que são amplamente usados por pessoas em
-múltiplos idiomas, mesmo ao escrever em idiomas locais.
-
-Também podem representar nomes próprios (como de organizações e grupos de
-trabalho) ou conceitos técnicos.
-
-#### AI
-> <em lang="en">[Artificial Intelligence](#artificial-intelligence)</em>
+### AI
+> - :house: :
+  <em lang="en">[Artificial Intelligence](#artificial-intelligence) <sup>(en)</sup><em>
 
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23AI) \|
@@ -127,7 +86,22 @@ trabalho) ou conceitos técnicos.
 
 ---
 
-#### Artificial Intelligence
+### Armas Autônomas Letais
+- Wikipedia: <em lang="pt">[Armas Autônomas Letais](https://pt.wikipedia.org/wiki/Armas_Aut%C3%B4nomas_Letais) <sup>(pt)</sup></em> 
+- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
+- :mag: :
+  **[Facebook](https://www.facebook.com/search/posts/?q=%23ArmasAutonomasLetais) \|
+  [GitHub](https://github.com/topics/armas-autonomas-letais) \|
+  [Instagram](https://www.instagram.com/explore/tags/ArmasAutonomasLetais) \|
+  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23ArmasAutonomasLetais) \|
+  [Medium](https://medium.com/search?q=%23ArmasAutonomasLetais) \|
+  [Pinterest](https://pinterest.com/search/pins/?q=%23ArmasAutonomasLetais) \|
+  [Reddit](https://www.reddit.com/search?q=%23ArmasAutonomasLetais) \|
+  [Twitter](https://twitter.com/search?q=%23ArmasAutonomasLetais) \|
+  [Youtube](https://www.youtube.com/results?search_query=%23ArmasAutonomasLetais)**
+
+
+### Artificial Intelligence
 - Wikipedia: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
 - Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
 - :mag: :
@@ -143,7 +117,23 @@ trabalho) ou conceitos técnicos.
 
 ---
 
-#### Human Rights
+### Direitos Humanos
+- Wikipedia: <em lang="pt">[Direitos Humanos](https://pt.wikipedia.org/wiki/Direitos_humanos) <sup>(pt)</sup></em> 
+- Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
+- :mag: :
+  **[Facebook](https://www.facebook.com/search/posts/?q=%23direitoshumanos) \|
+  [GitHub](https://github.com/topics/direitos-humanos) \|
+  [Instagram](https://www.instagram.com/explore/tags/DireitosHumanos) \|
+  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23direitoshumanos) \|
+  [Medium](https://medium.com/search?q=%23direitoshumanos) \|
+  [Pinterest](https://pinterest.com/search/pins/?q=%23direitoshumanos) \|
+  [Reddit](https://www.reddit.com/search?q=%23direitoshumanos) \|
+  [Twitter](https://twitter.com/search?q=%23direitoshumanos) \|
+  [Youtube](https://www.youtube.com/results?search_query=%23direitoshumanos)**
+
+---
+
+### Human Rights
 - Wikipedia: <em lang="en">[Human Rights](https://en.wikipedia.org/wiki/Human_rights) <sup>(en)</sup></em> 
 - Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
 - :mag: :
@@ -159,7 +149,40 @@ trabalho) ou conceitos técnicos.
 
 ---
 
-#### Lethal autonomous weapon
+### IA
+> - :house: :
+  <em lang="pt">[Inteligência Artificial](#artificial-intelligence) <sup>(pt)</sup><em>
+
+- :mag: :
+  **[Facebook](https://www.facebook.com/search/posts/?q=%23IA) \|
+  [GitHub](https://github.com/topics/ia) \|
+  [Instagram](https://www.instagram.com/explore/tags/ia) \|
+  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23IA) \|
+  [Medium](https://medium.com/search?q=%23IA) \|
+  [Pinterest](https://pinterest.com/search/pins/?q=%23IA) \|
+  [Reddit](https://www.reddit.com/search?q=%23IA) \|
+  [Twitter](https://twitter.com/search?q=%23IA) \|
+  [Youtube](https://www.youtube.com/results?search_query=%23IA)**
+
+---
+
+### Inteligência Artificial
+- Wikipedia: <em lang="pt">[Inteligência artificial](https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial) <sup>(pt)</sup></em> 
+- Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
+- :mag: :
+  **[Facebook](https://www.facebook.com/search/posts/?q=%23InteligenciaArtificial) \|
+  [GitHub](https://github.com/topics/inteligencia-artificial) \|
+  [Instagram](https://www.instagram.com/explore/tags/inteligenciaartificial) \|
+  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23InteligenciaArtificial) \|
+  [Medium](https://medium.com/search?q=%23InteligenciaArtificial) \|
+  [Pinterest](https://pinterest.com/search/pins/?q=%23InteligenciaArtificial) \|
+  [Reddit](https://www.reddit.com/search?q=%23InteligenciaArtificial) \|
+  [Twitter](https://twitter.com/search?q=%23InteligenciaArtificial) \|
+  [Youtube](https://www.youtube.com/results?search_query=%23InteligenciaArtificial)**
+
+---
+
+### Lethal autonomous weapon
 - Wikipedia: <em lang="en">[Lethal autonomous weapon](https://en.wikipedia.org/wiki/Lethal_autonomous_weapon) <sup>(en)</sup></em> 
 - Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
 - :mag: :
@@ -175,7 +198,7 @@ trabalho) ou conceitos técnicos.
 
 ---
 
-#### Technological unemployment
+### Technological unemployment
 - Wikipedia: <em lang="en">[Technological unemployment](https://en.wikipedia.org/wiki/Technological_unemployment) <sup>(en)</sup></em> 
 - Wikidata: [Q7692538](https://www.wikidata.org/wiki/Q7692538)
 - :mag: :
