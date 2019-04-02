@@ -21,18 +21,23 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 - [Lingvo](#lingvo)
     - [English](#english)
+        - [Tags](#tags)
+        - [Basic Esperanto terms used in this document](#basic-esperanto-terms-used-in-this-document)
     - [Español](#español)
+        - [Términos básicos en Esperanto utilizados en este documento](#términos-básicos-en-esperanto-utilizados-en-este-documento)
     - [Português](#português)
+        - [Etiquetas](#etiquetas)
+        - [Termos básicos em Esperanto usados neste documento](#termos-básicos-em-esperanto-usados-neste-documento)
 - [Etikedoj](#etikedoj)
     - [AI](#ai)
-    - [Armas Autônomas Letais](#armas-autônomas-letais)
+    - [Armas Autonomas Letais](#armas-autonomas-letais)
     - [Artificial Intelligence](#artificial-intelligence)
     - [Direitos Humanos](#direitos-humanos)
     - [Human Rights](#human-rights)
     - [IA](#ia)
-    - [Inteligência Artificial](#inteligência-artificial)
-    - [Lethal autonomous weapon](#lethal-autonomous-weapon)
-    - [Technological unemployment](#technological-unemployment)
+    - [Inteligencia Artificial](#inteligencia-artificial)
+    - [Lethal Autonomous Weapon](#lethal-autonomous-weapon)
+    - [Technological Unemployment](#technological-unemployment)
 
 <!-- /TOC -->
 
@@ -40,22 +45,53 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 ### English
 
+#### Tags
+
 - [AI](#ai)
 - [Artificial Intelligence](#artificial-intelligence)
 - [Human Rights](#human-rights)
 - [Lethal autonomous weapon](#lethal-autonomous-weapon)
 - [Technological unemployment](#technological-unemployment)
 
+#### Basic Esperanto terms used in this document
+
+- <em lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></em>
+    - <em lang="en" translate="no">Table of contents <sup>(en)</sup></em>
+- <em lang="eo" translate="no">Etikedoj <sup>(eo)</sup></em>
+    - <em lang="en" translate="no">Tag <sup>(en)</sup></em>
+- <em lang="eo" translate="no">Signifo <sup>(eo)</sup></em>
+    - <em lang="en" translate="no">Meaning <sup>(en)</sup></em>
+
 ### Español
 
 <em lang="es">Por favor espere</em>.
 
+#### Términos básicos en Esperanto utilizados en este documento
+
+- <em lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></em>
+    - <em lang="es" translate="no">Tabla de contenido <sup>(es)</sup></em>
+- <em lang="eo" translate="no">Etikedoj <sup>(eo)</sup></em>
+    - <em lang="es" translate="no">Etiqueta <sup>(es)</sup></em>
+- <em lang="eo" translate="no">Signifo <sup>(eo)</sup></em>
+    - <em lang="es" translate="no">Sentido <sup>(es)</sup></em>
+
 ### Português
+
+#### Etiquetas
 
 - [Armas Autônomas Letais](#armas-autônomas-letais)
 - [Direitos Humanos](#direitos-humanos)
 - [IA](#ia)
 - [Inteligência Artificial](#inteligência-artificial)
+
+#### Termos básicos em Esperanto usados neste documento
+
+- <em lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></em>
+    - <em lang="pt" translate="no">Índice de conteúdo <sup>(pt)</sup></em>
+- <em lang="eo" translate="no">Etikedoj <sup>(eo)</sup></em>
+    - <em lang="pt" translate="no">Etiqueta <sup>(pt)</sup></em>
+- <em lang="eo" translate="no">Signifo <sup>(eo)</sup></em>
+    - <em lang="pt" translate="no">Significado <sup>(pt)</sup></em>
 
 ## Etikedoj
 <!--
@@ -69,7 +105,7 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 -->
 
 ### AI
-
+- <em lang="eo">Etikedok</em>: <kbd translate="no">AI</kbd>, <kbd translate="no">ai</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23AI) \|
   [GitHub](https://github.com/topics/ai) \|
@@ -84,11 +120,12 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 <em lang="eo">Signifo</em>:
 
 > - :house: :
-  <em lang="en">[Artificial Intelligence](#artificial-intelligence) <sup>(en)</sup><em>
+  <em lang="en">[Artificial Intelligence](#artificial-intelligence) <sup>(en)</sup></em>
 
 ---
 
-### Armas Autônomas Letais
+### Armas Autonomas Letais
+- <em lang="eo">Etikedok</em>: <kbd translate="no">ArmasAutonomasLetais</kbd>, <kbd translate="no">armas-autonomas-letais</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23ArmasAutonomasLetais) \|
   [GitHub](https://github.com/topics/armas-autonomas-letais) \|
@@ -108,7 +145,7 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 ----
 
 ### Artificial Intelligence
-
+- <em lang="eo">Etikedok</em>: <kbd translate="no">ArtificialIntelligence</kbd>, <kbd translate="no">artificial-intelligence</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23ArtificialIntelligence) \|
   [GitHub](https://github.com/topics/artificial-intelligence) \|
@@ -122,12 +159,16 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 <em lang="eo">Signifo</em>:
 
-- Wikipedia: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
 - Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
+  - <span lang="eo">Angla lingvo</span>
+    - <span lang="en">English: <kbd translate="no">Artificial Intelligence</kbd><sup>(en)</sup></span>
+    - <span translate="no">Wikipedia</span>: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
+
 
 ---
 
 ### Direitos Humanos
+- <em lang="eo">Etikedok</em>: <kbd translate="no">DireitosHumanos</kbd>, <kbd translate="no">direitos-humanos</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23direitoshumanos) \|
   [GitHub](https://github.com/topics/direitos-humanos) \|
@@ -147,7 +188,7 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 ---
 
 ### Human Rights
-
+- <em lang="eo">Etikedok</em>: <kbd translate="no">HumanRights</kbd>, <kbd translate="no">HumanRights</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23HumanRights) \|
   [GitHub](https://github.com/topics/human-rights) \|
@@ -167,7 +208,7 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 ---
 
 ### IA
-
+- <em lang="eo">Etikedok</em>: <kbd translate="no">IA</kbd>, <kbd translate="no">ia</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23IA) \|
   [GitHub](https://github.com/topics/ia) \|
@@ -182,12 +223,12 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 <em lang="eo">Signifo</em>:
 
 > - :house: :
-  <em lang="pt">[Inteligência Artificial](#artificial-intelligence) <sup>(pt)</sup><em>
+  <em lang="pt">[Inteligência Artificial](#artificial-intelligence) <sup>(pt)</sup></em>
 
 ---
 
-### Inteligência Artificial
-
+### Inteligencia Artificial
+- <em lang="eo">Etikedok</em>: <kbd translate="no">InteligenciaArtificial</kbd>, <kbd translate="no">inteligencia-artificial</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23InteligenciaArtificial) \|
   [GitHub](https://github.com/topics/inteligencia-artificial) \|
@@ -206,7 +247,8 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 ---
 
-### Lethal autonomous weapon
+### Lethal Autonomous Weapon
+- <em lang="eo">Etikedok</em>: <kbd translate="no">LethalAutonomousWeapon</kbd>, <kbd translate="no">lethal-autonomous-weapon</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23LethalAutonomousWeapon) \|
   [GitHub](https://github.com/topics/lethal-autonomous-weapon) \|
@@ -225,7 +267,8 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 ---
 
-### Technological unemployment
+### Technological Unemployment
+- <em lang="eo">Etikedok</em>: <kbd translate="no">TechnologicalUnemployment</kbd>, <kbd translate="no">technological-unemployment</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23TechnologicalUnemployment) \|
   [GitHub](https://github.com/topics/technological-unemployment) \|
