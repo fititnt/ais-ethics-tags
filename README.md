@@ -1,6 +1,6 @@
 # A/IS Ethics tags via Etica.AI
 
-[![A/IS Ethics tags via Etica.AI](img/banner-temporary.png)](https://hashtags-pt.etica.ai/)
+[![A/IS Ethics tags via Etica.AI](img/banner-tags.png)](https://tags.etica.ai)
 
 ![English Key terms](img/badges/language-en.svg) ![Palavras-chave em português](img/badges/language-pt.svg)
 
