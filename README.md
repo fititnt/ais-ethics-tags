@@ -24,9 +24,10 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
         - [Tags](#tags)
         - [Basic Esperanto terms used in this document](#basic-esperanto-terms-used-in-this-document)
     - [Español](#español)
+        - [Etiquetas](#etiquetas)
         - [Términos básicos en Esperanto utilizados en este documento](#términos-básicos-en-esperanto-utilizados-en-este-documento)
     - [Português](#português)
-        - [Etiquetas](#etiquetas)
+        - [Etiquetas](#etiquetas-1)
         - [Termos básicos em Esperanto usados neste documento](#termos-básicos-em-esperanto-usados-neste-documento)
 - [Etikedoj](#etikedoj)
     - [AI](#ai)
@@ -44,6 +45,23 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 ## Lingvo
 
 ### English
+
+<strong lang="en"><em translation="no">A/IS Ethics Tags - Etica.AI</em> is</strong>
+
+<strong lang="en"><a translation="no" href="https://tags.etica.ai/#english">A/IS Ethics Tags - Etica.AI</a>
+is an initiative to facilitate search of content in social networks and GitHub
+projects related to Ethics of Autonomous and Intelligent Systems (A/IS Ethics).
+This includes Ethics of Artificial Intelligence and social implications in the use
+of technology.</strong>
+
+<span lang="en">A strong concern here is to be friendly to non-English speakers
+and people using automatic translation (we tested with Google Translator). A
+secondary reason is to help people know the equivalent of key terms in their
+language and the equivalent in others, but this depends on the help of the
+community that knows other languages.</span>
+
+<span lang="en">Help and improvements are welcome. You can contact main
+maintainer via the e-mail <strong translate="no">rocha(at)ieee.org</strong></span>.
 
 #### Tags
 
@@ -64,7 +82,14 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 ### Español
 
-<em lang="es">Por favor espere</em>.
+<em lang="es">Sin descripción en español en este momento.</em>
+
+<span lang="es">Ayuda y correcciones son bienvenidas. Puede ponerse en contacto
+con el mantenedor principal vía e-mail <strong translate="no">rocha(arroba)ieee.org</strong></span>.
+
+#### Etiquetas
+
+- [IA](#ia)
 
 #### Términos básicos en Esperanto utilizados en este documento
 
@@ -76,6 +101,20 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
     - <em lang="es" translate="no">Sentido <sup>(es)</sup></em>
 
 ### Português
+
+<span lang="pt"><a translation="no" href="https://tags.etica.ai/#português">A/IS Ethics Tags - Etica.AI</a> é uma
+iniciativa para facilitar busca de conteúdo em redes sociais e projetos no GitHub
+relacionados a Ética no uso Sistemas Autônomos e Inteligentes, o que inclui
+Ética na Inteligência Artificial e implicações sociais no uso de tecnologia.</span>
+
+<span lang="pt">Uma forte preocupação aqui é ser amigável para não-falantes de
+língua inglesa e pessoas que usam tradução automática (testamos com Google
+Translator). Uma razão secundárioa é ajudar pessoas a saberem o equivalente de
+termos-chave na língua delas e o equivalente nas demais, porém isso depende
+de ajuda da comunidade que sabe outras línguas.</span>
+
+<span lang="pt">Ajuda e correções são bem vindas. Pode entrar em contato com
+mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</strong></span>.
 
 #### Etiquetas
 
