@@ -1,2 +1,12 @@
+title: "A/IS Ethics Tags - Etica.AI"
+description: "[Public draft] Terms and quick links to find content related to A/IS Ethics on GitHub and social networks. Languages: English, Spanish and Portuguese"
+
+## We will use Esperanto as locale for the entire document
+
+# see https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+#locale: 'eo'
+# default_locale: 'eo'
+lang: 'eo'
+
 plugins:
   - jemoji

@@ -1,19 +1,18 @@
 # A/IS Ethics Tags - Etica.AI
 
-[![A/IS Ethics tags via Etica.AI](img/banner-tags.png)](https://tags.etica.ai)
+[![A/IS Ethics Tags - Etica.AI](img/banner-tags.png)](https://tags.etica.ai)
 
-[![English Key terms](img/badges/language-en.svg)](#english) [![Palavras-chave em português](img/badges/language-pt.svg)](#português)
+[![English: Tags](img/badges/language-en.svg)](#english) [![Español: Etiquetsa](img/badges/language-es.svg)](#español) [![Português: Etiquetas](img/badges/language-pt.svg)](#português)
 
 <!-- ![Status: Work in Progress](img/badges/status-work-in-progress.svg)-->
 
-<strong lang="eo"><span translate="no">Etica.AI</span> Etikedoj. <sup>(eo)</sup></strong>
+<!-- <strong lang="eo"><span translate="no">Etica.AI</span> Etikedoj. <sup>(eo)</sup></strong> -->
 
 <!--
 **Lista de termos chave ("hashtags") para procurar conteúdo relacionado a ética
 na inteligência artificial em redes sociais voltados para uso pelos de falantes
 de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 -->
-
 
 # Enhavtabelo
 
@@ -46,8 +45,6 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 ### English
 
-<strong lang="en"><em translation="no">A/IS Ethics Tags - Etica.AI</em> is</strong>
-
 <strong lang="en"><a translation="no" href="https://tags.etica.ai/#english">A/IS Ethics Tags - Etica.AI</a>
 is an initiative to facilitate search of content in social networks and GitHub
 projects related to Ethics of Autonomous and Intelligent Systems (A/IS Ethics).
@@ -73,12 +70,16 @@ maintainer via the e-mail <strong translate="no">rocha(at)ieee.org</strong></spa
 
 #### Basic Esperanto terms used in this document
 
-- <em lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Akronimo <sup>(eo)</sup></strong>
+    - <em lang="en" translate="no">Acronym <sup>(en)</sup></em>
+- <strong lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></strong>
     - <em lang="en" translate="no">Table of contents <sup>(en)</sup></em>
-- <em lang="eo" translate="no">Etikedoj <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Etikedoj <sup>(eo)</sup></strong>
     - <em lang="en" translate="no">Tag <sup>(en)</sup></em>
-- <em lang="eo" translate="no">Signifo <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Signifo <sup>(eo)</sup></strong>
     - <em lang="en" translate="no">Meaning <sup>(en)</sup></em>
+- <strong lang="eo" translate="no">Rilatoj <sup>(eo)</sup></strong>
+    - <em lang="en" translate="no">Relationships <sup>(en)</sup></em>
 
 ### Español
 
@@ -93,12 +94,16 @@ con el mantenedor principal vía e-mail <strong translate="no">rocha(arroba)ieee
 
 #### Términos básicos en Esperanto utilizados en este documento
 
-- <em lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Akronimo <sup>(eo)</sup></strong>
+    - <em lang="es" translate="no">Acrónimo <sup>(es)</sup></em>
+- <strong lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></strong>
     - <em lang="es" translate="no">Tabla de contenido <sup>(es)</sup></em>
-- <em lang="eo" translate="no">Etikedoj <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Etikedoj <sup>(eo)</sup></strong>
     - <em lang="es" translate="no">Etiqueta <sup>(es)</sup></em>
-- <em lang="eo" translate="no">Signifo <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Signifo <sup>(eo)</sup></strong>
     - <em lang="es" translate="no">Sentido <sup>(es)</sup></em>
+- <strong lang="eo" translate="no">Rilatoj <sup>(eo)</sup></strong>
+    - <em lang="es" translate="no">Relaciones <sup>(es)</sup></em>
 
 ### Português
 
@@ -125,12 +130,16 @@ mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</
 
 #### Termos básicos em Esperanto usados neste documento
 
-- <em lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Akronimo <sup>(eo)</sup></strong>
+    - <em lang="pt" translate="no">acrônimo <sup>(pt)</sup></em>
+- <strong lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></strong>
     - <em lang="pt" translate="no">Índice de conteúdo <sup>(pt)</sup></em>
-- <em lang="eo" translate="no">Etikedoj <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Etikedoj <sup>(eo)</sup></strong>
     - <em lang="pt" translate="no">Etiqueta <sup>(pt)</sup></em>
-- <em lang="eo" translate="no">Signifo <sup>(eo)</sup></em>
+- <strong lang="eo" translate="no">Signifo <sup>(eo)</sup></strong>
     - <em lang="pt" translate="no">Significado <sup>(pt)</sup></em>
+- <strong lang="eo" translate="no">Rilatoj <sup>(eo)</sup></strong>
+    - <em lang="pt" translate="no">Relações <sup>(pt)</sup></em>
 
 ## Etikedoj
 <!--
@@ -199,10 +208,16 @@ mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</
 <em lang="eo">Signifo</em>:
 
 - Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
-  - <span lang="eo">Angla lingvo</span>
-    - <span lang="en">English: <kbd translate="no">Artificial Intelligence</kbd><sup>(en)</sup></span>
-    - <span translate="no">Wikipedia</span>: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
-
+    - <span lang="eo">Angla lingvo</span>
+        - <span lang="en">English: <kbd translate="no">Artificial Intelligence</kbd><sup>(en)</sup></span>
+        - <span translate="no">Wikipedia</span>: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
+    - <span lang="eo">Rilatoj</span>:
+        - <span lang="eo">Hispana lingvo</span>
+            - <span lang="es"><a href="#ai">IA <sup translate="no">(es)</sup></a></span>
+            - <span lang="pt"><a href="#inteligencia-artificial">Inteligencia artificial <sup translate="no">(es)</sup></a></span>
+        - <span lang="eo">Portugala lingvo</span>
+            - <span lang="pt"><a href="#ai">IA <sup translate="no">(pt)</sup></a></span>
+            - <span lang="pt"><a href="#inteligencia-artificial">Inteligência artificial <sup translate="no">(pt)</sup></a></span>
 
 ---
 
@@ -261,8 +276,15 @@ mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</
 
 <em lang="eo">Signifo</em>:
 
-> - :house: :
-  <em lang="pt">[Inteligência Artificial](#artificial-intelligence) <sup>(pt)</sup></em>
+- Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
+    - <span lang="eo">Akronimo</span>
+        - <span lang="es">Español: <kbd translate="no">Inteligencia Artificial</kbd><sup>(es)</sup></span> (<a href="#inteligencia-artificial">Inteligencia Artificial</a>)
+        - <span lang="pt">Português: <kbd translate="no">Inteligência Artificial</kbd><sup>(pt)</sup></span> (<a href="#inteligencia-artificial">Inteligencia Artificial</a>)
+
+    - <span lang="eo">Rilatoj</span>:
+        - <span lang="eo">Angla lingvo</span>
+            - <span lang="en"><a href="#ai">AI <sup translate="no">(en)</sup></a></span>
+            - <span lang="en"><a href="#artificial-intelligence">Artificial Intelligence <sup translate="no">(en)</sup></a></span>
 
 ---
 
