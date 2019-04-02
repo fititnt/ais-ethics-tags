@@ -16,13 +16,15 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 - [Hashtags](#hashtags)
     - [Português](#português)
-        - [Direitos humanos](#direitos-humanos)
+        - [Armas Autônomas Letais](#armas-autônomas-letais)
+        - [Direitos Humanos](#direitos-humanos)
         - [IA](#ia)
         - [Inteligência Artificial](#inteligência-artificial)
     - [Internacional](#internacional)
         - [AI](#ai)
         - [Artificial Intelligence](#artificial-intelligence)
         - [Human Rights](#human-rights)
+        - [Lethal autonomous weapon](#lethal-autonomous-weapon)
         - [Technological unemployment](#technological-unemployment)
 
 <!-- /TOC -->
@@ -40,13 +42,27 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 ### Português
 
-#### Direitos humanos
-- Wikipedia: <em lang="pt">[Direitos humanos](https://pt.wikipedia.org/wiki/Direitos_humanos) <sup>(pt)</sup></em> 
+#### Armas Autônomas Letais
+- Wikipedia: <em lang="pt">[Armas Autônomas Letais](https://pt.wikipedia.org/wiki/Armas_Aut%C3%B4nomas_Letais) <sup>(pt)</sup></em> 
+- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
+- :mag: :
+  **[Facebook](https://www.facebook.com/search/posts/?q=%23ArmasAutonomasLetais) \|
+  [GitHub](https://github.com/topics/armas-autonomas-letais) \|
+  [Instagram](https://www.instagram.com/explore/tags/ArmasAutonomasLetais) \|
+  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23ArmasAutonomasLetais) \|
+  [Medium](https://medium.com/search?q=%23ArmasAutonomasLetais) \|
+  [Pinterest](https://pinterest.com/search/pins/?q=%23ArmasAutonomasLetais) \|
+  [Reddit](https://www.reddit.com/search?q=%23ArmasAutonomasLetais) \|
+  [Twitter](https://twitter.com/search?q=%23ArmasAutonomasLetais) \|
+  [Youtube](https://www.youtube.com/results?search_query=%23ArmasAutonomasLetais)**
+
+#### Direitos Humanos
+- Wikipedia: <em lang="pt">[Direitos Humanos](https://pt.wikipedia.org/wiki/Direitos_humanos) <sup>(pt)</sup></em> 
 - Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23direitoshumanos) \|
   [GitHub](https://github.com/topics/direitos-humanos) \|
-  [Instagram](https://www.instagram.com/explore/tags/direitos-humanos) \|
+  [Instagram](https://www.instagram.com/explore/tags/DireitosHumanos) \|
   [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23direitoshumanos) \|
   [Medium](https://medium.com/search?q=%23direitoshumanos) \|
   [Pinterest](https://pinterest.com/search/pins/?q=%23direitoshumanos) \|
@@ -140,6 +156,24 @@ trabalho) ou conceitos técnicos.
   [Reddit](https://www.reddit.com/search?q=%23HumanRights) \|
   [Twitter](https://twitter.com/search?q=%23HumanRights) \|
   [Youtube](https://www.youtube.com/results?search_query=%23HumanRights)**
+
+---
+
+#### Lethal autonomous weapon
+- Wikipedia: <em lang="en">[Lethal autonomous weapon](https://en.wikipedia.org/wiki/Lethal_autonomous_weapon) <sup>(en)</sup></em> 
+- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
+- :mag: :
+  **[Facebook](https://www.facebook.com/search/posts/?q=%23LethalAutonomousWeapon) \|
+  [GitHub](https://github.com/topics/lethal-autonomous-weapon) \|
+  [Instagram](https://www.instagram.com/explore/tags/LethalAutonomousWeapon) \|
+  [LinkedIn](https://www.linkedin.com/search/results/content/?keywords=%23LethalAutonomousWeapon) \|
+  [Medium](https://medium.com/search?q=%23LethalAutonomousWeapon) \|
+  [Pinterest](https://pinterest.com/search/pins/?q=%23LethalAutonomousWeapon) \|
+  [Reddit](https://www.reddit.com/search?q=%23LethalAutonomousWeapon) \|
+  [Twitter](https://twitter.com/search?q=%23LethalAutonomousWeapon) \|
+  [Youtube](https://www.youtube.com/results?search_query=%23LethalAutonomousWeapon)**
+
+---
 
 #### Technological unemployment
 - Wikipedia: <em lang="en">[Technological unemployment](https://en.wikipedia.org/wiki/Technological_unemployment) <sup>(en)</sup></em> 
