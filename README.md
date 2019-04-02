@@ -1,4 +1,4 @@
-# A/IS Ethics tags via Etica.AI
+# A/IS Ethics Tags - Etica.AI
 
 [![A/IS Ethics tags via Etica.AI](img/banner-tags.png)](https://tags.etica.ai)
 
@@ -6,7 +6,7 @@
 
 <!-- ![Status: Work in Progress](img/badges/status-work-in-progress.svg)-->
 
-**Etica.AI Etikedoj.**
+<strong lang="eo"><span translate="no">Etica.AI</span> Etikedoj. <sup>(eo)</sup></strong>
 
 <!--
 **Lista de termos chave ("hashtags") para procurar conteúdo relacionado a ética
@@ -68,10 +68,7 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 
 -->
 
-
 ### AI
-> - :house: :
-  <em lang="en">[Artificial Intelligence](#artificial-intelligence) <sup>(en)</sup><em>
 
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23AI) \|
@@ -84,11 +81,14 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23AI) \|
   [Youtube](https://www.youtube.com/results?search_query=%23AI)**
 
+<em lang="eo">Signifo</em>:
+
+> - :house: :
+  <em lang="en">[Artificial Intelligence](#artificial-intelligence) <sup>(en)</sup><em>
+
 ---
 
 ### Armas Autônomas Letais
-- Wikipedia: <em lang="pt">[Armas Autônomas Letais](https://pt.wikipedia.org/wiki/Armas_Aut%C3%B4nomas_Letais) <sup>(pt)</sup></em> 
-- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23ArmasAutonomasLetais) \|
   [GitHub](https://github.com/topics/armas-autonomas-letais) \|
@@ -100,10 +100,15 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23ArmasAutonomasLetais) \|
   [Youtube](https://www.youtube.com/results?search_query=%23ArmasAutonomasLetais)**
 
+<em lang="eo">Signifo</em>:
+
+- Wikipedia: <em lang="pt">[Armas Autônomas Letais](https://pt.wikipedia.org/wiki/Armas_Aut%C3%B4nomas_Letais) <sup>(pt)</sup></em> 
+- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
+
+----
 
 ### Artificial Intelligence
-- Wikipedia: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
-- Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
+
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23ArtificialIntelligence) \|
   [GitHub](https://github.com/topics/artificial-intelligence) \|
@@ -115,11 +120,14 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23ArtificialIntelligence) \|
   [Youtube](https://www.youtube.com/results?search_query=%23ArtificialIntelligence)**
 
+<em lang="eo">Signifo</em>:
+
+- Wikipedia: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
+- Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
+
 ---
 
 ### Direitos Humanos
-- Wikipedia: <em lang="pt">[Direitos Humanos](https://pt.wikipedia.org/wiki/Direitos_humanos) <sup>(pt)</sup></em> 
-- Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23direitoshumanos) \|
   [GitHub](https://github.com/topics/direitos-humanos) \|
@@ -131,11 +139,15 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23direitoshumanos) \|
   [Youtube](https://www.youtube.com/results?search_query=%23direitoshumanos)**
 
+<em lang="eo">Signifo</em>:
+
+- Wikipedia: <em lang="pt">[Direitos Humanos](https://pt.wikipedia.org/wiki/Direitos_humanos) <sup>(pt)</sup></em> 
+- Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
+
 ---
 
 ### Human Rights
-- Wikipedia: <em lang="en">[Human Rights](https://en.wikipedia.org/wiki/Human_rights) <sup>(en)</sup></em> 
-- Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
+
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23HumanRights) \|
   [GitHub](https://github.com/topics/human-rights) \|
@@ -147,11 +159,14 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23HumanRights) \|
   [Youtube](https://www.youtube.com/results?search_query=%23HumanRights)**
 
+<em lang="eo">Signifo</em>:
+
+- Wikipedia: <em lang="en">[Human Rights](https://en.wikipedia.org/wiki/Human_rights) <sup>(en)</sup></em> 
+- Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
+
 ---
 
 ### IA
-> - :house: :
-  <em lang="pt">[Inteligência Artificial](#artificial-intelligence) <sup>(pt)</sup><em>
 
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23IA) \|
@@ -164,11 +179,15 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23IA) \|
   [Youtube](https://www.youtube.com/results?search_query=%23IA)**
 
+<em lang="eo">Signifo</em>:
+
+> - :house: :
+  <em lang="pt">[Inteligência Artificial](#artificial-intelligence) <sup>(pt)</sup><em>
+
 ---
 
 ### Inteligência Artificial
-- Wikipedia: <em lang="pt">[Inteligência artificial](https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial) <sup>(pt)</sup></em> 
-- Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
+
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23InteligenciaArtificial) \|
   [GitHub](https://github.com/topics/inteligencia-artificial) \|
@@ -180,11 +199,14 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23InteligenciaArtificial) \|
   [Youtube](https://www.youtube.com/results?search_query=%23InteligenciaArtificial)**
 
+<em lang="eo">Signifo</em>:
+
+- Wikipedia: <em lang="pt">[Inteligência artificial](https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial) <sup>(pt)</sup></em> 
+- Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
+
 ---
 
 ### Lethal autonomous weapon
-- Wikipedia: <em lang="en">[Lethal autonomous weapon](https://en.wikipedia.org/wiki/Lethal_autonomous_weapon) <sup>(en)</sup></em> 
-- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23LethalAutonomousWeapon) \|
   [GitHub](https://github.com/topics/lethal-autonomous-weapon) \|
@@ -196,11 +218,14 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Twitter](https://twitter.com/search?q=%23LethalAutonomousWeapon) \|
   [Youtube](https://www.youtube.com/results?search_query=%23LethalAutonomousWeapon)**
 
+<em lang="eo">Signifo</em>:
+
+- Wikipedia: <em lang="en">[Lethal autonomous weapon](https://en.wikipedia.org/wiki/Lethal_autonomous_weapon) <sup>(en)</sup></em> 
+- Wikidata: [Q25378861](https://www.wikidata.org/wiki/Q25378861)
+
 ---
 
 ### Technological unemployment
-- Wikipedia: <em lang="en">[Technological unemployment](https://en.wikipedia.org/wiki/Technological_unemployment) <sup>(en)</sup></em> 
-- Wikidata: [Q7692538](https://www.wikidata.org/wiki/Q7692538)
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23TechnologicalUnemployment) \|
   [GitHub](https://github.com/topics/technological-unemployment) \|
@@ -211,6 +236,11 @@ de português e curadoria de [Etica.AI](https://pt.etica.ai).**
   [Reddit](https://www.reddit.com/search?q=%23TechnologicalUnemployment) \|
   [Twitter](https://twitter.com/search?q=%23TechnologicalUnemployment) \|
   [Youtube](https://www.youtube.com/results?search_query=%23TechnologicalUnemployment)**
+
+<em lang="eo">Signifo</em>:
+
+- Wikipedia: <em lang="en">[Technological unemployment](https://en.wikipedia.org/wiki/Technological_unemployment) <sup>(en)</sup></em> 
+- Wikidata: [Q7692538](https://www.wikidata.org/wiki/Q7692538)
 
 ---
 
