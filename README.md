@@ -14,6 +14,18 @@ na inteligência artificial em redes sociais voltados para uso pelos de falantes
 de português e curadoria de [Etica.AI](https://pt.etica.ai).**
 -->
 
+---
+
+_[etica.ai](https://etica.ai) \|
+[docs.etica.ai](https://docs.etica.ai) \|
+[groups.etica.ai](https://groups.etica.ai) \|
+[hfoss.etica.ai](https://hfoss.etica.ai) \|
+[organizations.etica.ai](https://organizations.etica.ai) \|
+[standards.etica.ai](https://standards.etica.ai) \|
+**tags.etica.ai**_
+
+---
+
 # Enhavtabelo
 
 <!-- TOC depthFrom:2 depthTo:5 -->
