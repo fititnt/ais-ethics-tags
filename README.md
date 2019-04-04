@@ -207,7 +207,7 @@ mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</
 ----
 
 ### Artificial Intelligence
-- <em lang="eo">Etikedok</em>: <kbd translate="no">ArtificialIntelligence</kbd>, <kbd translate="no">artificial-intelligence</kbd>
+- <em lang="eo">Etikedok</em>: <kbd translate="no" class="tag-camelcase">ArtificialIntelligence</kbd>, <kbd translate="no"  class="tag-dash">artificial-intelligence</kbd>
 - :mag: :
   **[Facebook](https://www.facebook.com/search/posts/?q=%23ArtificialIntelligence) \|
   [GitHub](https://github.com/topics/artificial-intelligence) \|
@@ -275,31 +275,6 @@ This full term is too big to have a simple work in English. Review later (fititn
     - <span lang="eo">Portugala lingvo</span>
         - <span lang="pt">Português: <kbd translate="no">Ética na Inteligência Artificial</kbd><sup>(pt)</sup></span>
         - <span translate="no">Wikipedia</span>: <em lang="en">[Ética na inteligência artificial](https://pt.wikipedia.org/wiki/%C3%89tica_na_intelig%C3%AAncia_artificial) <sup>(pt)</sup></em>
-
-
-Please ignore this part; just testing github README render (fititnt, 2019-04-04 00:41 BRT)
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
 
 ---
 
@@ -417,9 +392,3 @@ Term 2
 To the extent possible under law, [Emerson Rocha](https://github.com/fititnt)
 has waived all copyright and related or neighboring rights to this work to
 [Public Domain](UNLICENSE).
-
-<!-- JavaScript and CSS for change visual presentation of the content -->
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="assets/js/ais-ethics-tags.js"></script>
