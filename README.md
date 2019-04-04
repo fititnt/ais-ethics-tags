@@ -45,6 +45,7 @@ _[etica.ai](https://etica.ai) \|
     - [Armas Autonomas Letais](#armas-autonomas-letais)
     - [Artificial Intelligence](#artificial-intelligence)
     - [Direitos Humanos](#direitos-humanos)
+    - [Ethics of Artificial Intelligence](#ethics-of-artificial-intelligence)
     - [Human Rights](#human-rights)
     - [IA](#ia)
     - [Inteligencia Artificial](#inteligencia-artificial)
@@ -76,6 +77,7 @@ maintainer via the e-mail <strong translate="no">rocha(at)ieee.org</strong></spa
 
 - [AI](#ai)
 - [Artificial Intelligence](#artificial-intelligence)
+- [Ethics of Artificial Intelligence](#ethics-of-artificial-intelligence)
 - [Human Rights](#human-rights)
 - [Lethal autonomous weapon](#lethal-autonomous-weapon)
 - [Technological unemployment](#technological-unemployment)
@@ -222,7 +224,7 @@ mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</
 - Wikidata: [Q11660](https://www.wikidata.org/wiki/Q11660)
     - <span lang="eo">Angla lingvo</span>
         - <span lang="en">English: <kbd translate="no">Artificial Intelligence</kbd><sup>(en)</sup></span>
-        - <span translate="no">Wikipedia</span>: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em> 
+        - <span translate="no">Wikipedia</span>: <em lang="en">[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) <sup>(en)</sup></em>
     - <span lang="eo">Rilatoj</span>:
         - <span lang="eo">Hispana lingvo</span>
             - <span lang="es"><a href="#ai">IA <sup translate="no">(es)</sup></a></span>
@@ -250,6 +252,29 @@ mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</
 
 - Wikipedia: <em lang="pt">[Direitos Humanos](https://pt.wikipedia.org/wiki/Direitos_humanos) <sup>(pt)</sup></em> 
 - Wikidata: [Q8458](https://www.wikidata.org/wiki/Q8458)
+
+---
+
+### Ethics of Artificial Intelligence
+<!--
+This full term is too big to have a simple work in English. Review later (fititnt, 2019-04-03 23:25 BRT)
+-->
+- <em lang="eo">Etikedok</em>: ?
+- :mag: :
+  **?**
+
+<em lang="eo">Signifo</em>:
+
+- Wikidata: [Q12727779](https://www.wikidata.org/wiki/Q12727779)
+    - <span lang="eo">Angla lingvo</span>
+        - <span lang="en">English: <kbd translate="no">Ethics of Artificial Intelligence</kbd><sup>(en)</sup></span>
+        - <span translate="no">Wikipedia</span>: <em lang="en">[Ethics of Artificial Intelligence](https://en.wikipedia.org/wiki/Ethics_of_artificial_intelligence) <sup>(en)</sup></em>
+    - <span lang="eo">Hispana lingvo</span>
+        - <span lang="es">Español: <kbd translate="no">Ética en la inteligencia artificial</kbd><sup>(en)</sup></span>
+        - <span translate="no">Wikipedia</span>: <em lang="es">[Ética en la inteligencia artificial](https://es.wikipedia.org/wiki/%C3%89tica_en_la_inteligencia_artificial) <sup>(es)</sup></em>
+    - <span lang="eo">Portugala lingvo</span>
+        - <span lang="pt">Português: <kbd translate="no">Ética na Inteligência Artificial</kbd><sup>(pt)</sup></span>
+        - <span translate="no">Wikipedia</span>: <em lang="en">[Ética na inteligência artificial](https://pt.wikipedia.org/wiki/%C3%89tica_na_intelig%C3%AAncia_artificial) <sup>(pt)</sup></em>
 
 ---
 
