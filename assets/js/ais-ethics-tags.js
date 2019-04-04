@@ -1,0 +1,1 @@
+console.log('test from ais-ethics-tags.js');
