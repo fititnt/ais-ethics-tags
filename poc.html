@@ -22,6 +22,16 @@
 </head>
 
 <body>
+
+  <div>
+    <a class="skip-main" href="#english">English</a>
+    <a class="skip-main" href="#english-tags">Go to English Tags</a>
+    <a class="skip-main" href="#español">Español</a>
+    <a class="skip-main" href="#etiquetas-españolas">Vaya a las etiquetas del español</a>
+    <a class="skip-main" href="#português">Português</a>
+    <a class="skip-main" href="#etiquetas-do-português">Vá para etiquetas do português</a>
+  </div>
+
   <div class="container-lg px-3 my-5 markdown-body">
 
     <header>
@@ -29,15 +39,20 @@
 
       <p><a href="https://tags.etica.ai"><img src="/img/banner-tags.png" alt="A/IS Ethics Tags - Etica.AI"></a></p>
 
-      <p><a href="#english"><img src="/img/badges/language-en.svg" alt="English: Tags"></a> <a href="#espa%C3%B1ol"><img
-            src="/img/badges/language-es.svg" alt="Español: Etiquetsa"></a> <a href="#portugu%C3%AAs"><img src="/img/badges/language-pt.svg"
-            alt="Português: Etiquetas"></a>
-      </p>
+      <nav>
+        <h2 class="screen-reader-text">Quick Links</h2>
+        <a href="#english"><img src="/img/badges/language-en.svg" alt="English: Tags"></a>
+        <a href="#español"><img src="/img/badges/language-es.svg" alt="Español: Etiquetsa"></a>
+        <a href="#português"><img src="/img/badges/language-pt.svg" alt="Português: Etiquetas"></a>
+      </nav>
 
       <hr>
 
       <!-- TODO: consider add a nav tag here and a screen-only heading to these other EticaAI sites (fititnt, 2019-04-06 05:59 BRT) -->
+    </header>
 
+    <aside>
+      <h2 class="screen-reader-text">EticaAI related sites</h2>
       <p><em><a href="https://etica.ai">etica.ai</a> |
           <a href="https://docs.etica.ai">docs.etica.ai</a> |
           <a href="https://groups.etica.ai">groups.etica.ai</a> |
@@ -46,11 +61,11 @@
           <a href="https://standards.etica.ai">standards.etica.ai</a> |
           <strong>tags.etica.ai</strong></em>
       </p>
-    </header>
+    </aside>
 
     <hr>
 
-    <section>
+    <nav>
       <h2 id="enhavtabelo">Enhavtabelo</h2>
 
       <ul>
@@ -60,22 +75,22 @@
             <li>
               <a href="#english">English</a>
               <ul>
-                <li><a href="#tags">Tags</a></li>
+                <li><a href="#english-tags">English Tags</a></li>
                 <li><a href="#basic-esperanto-terms-used-in-this-document">Basic Esperanto terms used in this document</a></li>
               </ul>
             </li>
             <li>
               <a href="#espa%C3%B1ol">Español</a>
               <ul>
-                <li><a href="#etiquetas">Etiquetas</a></li>
+                <li><a href="#etiquetas-españolas">Etiquetas españolas</a></li>
                 <li><a href="#t%C3%A9rminos-b%C3%A1sicos-en-esperanto-utilizados-en-este-documento">Términos básicos en
                     Esperanto utilizados en este documento</a></li>
               </ul>
             </li>
             <li>
-              <a href="#portugu%C3%AAs">Português</a>
+              <a href="#português">Português</a>
               <ul>
-                <li><a href="#etiquetas-1">Etiquetas</a></li>
+                <li><a href="#etiquetas-do-português">Etiquetas do português</a></li>
                 <li><a href="#termos-b%C3%A1sicos-em-esperanto-usados-neste-documento">Termos básicos em Esperanto
                     usados
                     neste documento</a></li>
@@ -100,9 +115,12 @@
         </li>
       </ul>
 
-      <h3 id="lingvo">Lingvo</h3>
+    </nav>
+    <section>
 
-      <h4 id="english">English</h4>
+      <h2 id="lingvo">Lingvo</h2>
+
+      <h3 tabindex="-1" id="english">English</h3>
 
       <p><strong lang="en"><a href="https://tags.etica.ai/#english">A/IS Ethics Tags - Etica.AI</a>
           is an initiative to facilitate search of content in social networks and GitHub
@@ -120,7 +138,7 @@
           maintainer via the e-mail <strong translate="no">rocha(at)ieee.org</strong></span>.</p>
 
       <nav>
-        <h5 id="tags">English Tags</h5>
+        <h4 tabindex="-1" id="english-tags">English Tags</h4>
 
         <ul>
           <li><a href="#ai">AI</a></li>
@@ -132,7 +150,7 @@
         </ul>
       </nav>
 
-      <h5 id="basic-esperanto-terms-used-in-this-document">Basic Esperanto terms used in this document</h5>
+      <h4 id="basic-esperanto-terms-used-in-this-document">Basic Esperanto terms used in this document</h4>
 
       <ul>
         <li>
@@ -167,7 +185,7 @@
         </li>
       </ul>
 
-      <h4 id="español">Español</h4>
+      <h3 tabindex="-1" id="español">Español</h3>
 
       <p><em lang="es">Sin descripción en español en este momento.</em></p>
 
@@ -175,15 +193,15 @@
           con el mantenedor principal vía e-mail <strong translate="no">rocha(arroba)ieee.org</strong></span>.</p>
 
       <nav>
-        <h5 id="etiquetas">Etiquetas españolas</h5>
+        <h4 tabindex="-1" id="etiquetas-españolas">Etiquetas españolas</h4>
 
         <ul>
           <li><a href="#ia">IA</a></li>
         </ul>
       </nav>
 
-      <h5 id="términos-básicos-en-esperanto-utilizados-en-este-documento">Términos básicos en Esperanto utilizados en
-        este documento</h5>
+      <h4 id="términos-básicos-en-esperanto-utilizados-en-este-documento">Términos básicos en Esperanto utilizados en
+        este documento</h4>
 
       <ul>
         <li>
@@ -218,7 +236,7 @@
         </li>
       </ul>
 
-      <h4 id="português">Português</h4>
+      <h3 tabindex="-1" id="português">Português</h3>
 
       <p><span lang="pt"><a href="https://tags.etica.ai/#portugu%C3%AAs">A/IS Ethics Tags - Etica.AI</a>
           é uma
@@ -236,7 +254,7 @@
           mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</strong></span>.</p>
 
       <nav>
-        <h5 id="etiquetas-1">Etiquetas do português</h5>
+        <h4 tabindex="-1" id="etiquetas-do-português">Etiquetas do português</h4>
 
         <ul>
           <li><a href="#armas-aut%C3%B4nomas-letais">Armas Autônomas Letais</a></li>
@@ -246,7 +264,7 @@
         </ul>
       </nav>
 
-      <h5 id="termos-básicos-em-esperanto-usados-neste-documento">Termos básicos em Esperanto usados neste documento</h5>
+      <h4 id="termos-básicos-em-esperanto-usados-neste-documento">Termos básicos em Esperanto usados neste documento</h4>
 
       <ul>
         <li>
