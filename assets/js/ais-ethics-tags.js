@@ -52,3 +52,42 @@ const wikidataItemsAll = [
 ];
 
 wikidata($('.output-test'), wikidataItemsAll.join('|'));
+
+
+function wikidataPreload(cb, wikidataItemsAll) {
+  //...
+}
+
+
+function tagSearchLinks(el) {
+  let tagCamelCase = $(el).find('.tag-camelcase').text();
+  let tagDash = $(el).find('.tag-dash').text();
+  let tagClean = $(el).find('.tag-clean').text();
+
+  // console.log('eeeee', tagCamelCase, tagDash, tagClean);
+
+  let searchLinks = '<a href="https://www.facebook.com/search/posts/?q=%23' + tagCamelCase + '">Facebook</a> | \
+  <a href="https://github.com/topics/' + tagDash + 'e">GitHub</a> | \
+  <a href="https://www.instagram.com/explore/tags/' + tagClean + '">Instagram</a> | \
+  <a href="https://www.linkedin.com/search/results/content/?keywords=%23' + tagCamelCase + '">LinkedIn</a> | \
+  <a href="https://medium.com/search?q=%23' + tagCamelCase + '">Medium</a> | \
+  <a href="https://pinterest.com/search/pins/?q=%23' + tagCamelCase + '">Pinterest</a> | \
+  <a href="https://www.reddit.com/search?q=%23' + tagCamelCase + '">Reddit</a> | \
+  <a href="https://twitter.com/search?q=%23' + tagCamelCase + '">Twitter</a> | \
+  <a href="https://www.youtube.com/results?search_query=%23' + tagCamelCase + '">Youtube</a>';
+
+  $(el).find('.tag-searchlinks').html(searchLinks);
+}
+
+
+// For each tag...
+$('#tags-container > article').each(function(index, element) {
+  const tagUid = $(element).find('[itemprop="name"]').prop('id');
+
+  //console.log('tagUid', tagUid);
+  if (tagUid == 'artificial-intelligence') {
+    console.log('oioioi', element);
+    tagSearchLinks(element);
+  }
+  //console.log(($(element).find('[itemprop="name"]')).prop('id'));
+});
