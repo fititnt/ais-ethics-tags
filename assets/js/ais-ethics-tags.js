@@ -8,6 +8,8 @@
 
 console.log('test from ais-ethics-tags.js');
 
+let wikidataResultAll;
+
 
 
 
@@ -31,6 +33,13 @@ function wikidata(el, items) {
   })
   .done(function (html) {
     console.log('wikidata done', el, items, html);
+    if (html && html.entities) {
+      wikidataResultAll = html.entities;
+      prepareWikidataInfo();
+    } else {
+      console.log('wikidata failed');
+    }
+
     $(el).append(html);
   })
   .fail(function (html) {
@@ -38,11 +47,6 @@ function wikidata(el, items) {
     $(el).append(html);
   })
 }
-
-// wikidata($('.output-test'), 'Q11660');
-
-
-console.log('aaaaaaa');
 
 const wikidataItemsAll = [
   'Q8458',  // human rights
@@ -58,16 +62,19 @@ function wikidataPreload(cb, wikidataItemsAll) {
   //...
 }
 
-
 function tagSearchLinks(el) {
-  let tagCamelCase = $(el).find('.tag-camelcase').text();
-  let tagDash = $(el).find('.tag-dash').text();
-  let tagClean = $(el).find('.tag-clean').text();
+  let tagCamelCase = $(el).find('.tag-camelcase').text() || '';
+  let tagDash = $(el).find('.tag-dash').text() || tagCamelCase.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
+  let tagClean = $(el).find('.tag-clean').text() || tagDash.replace('/-/g', '');
+
+  if (!tagCamelCase) {
+    return false;
+  }
 
   // console.log('eeeee', tagCamelCase, tagDash, tagClean);
 
   let searchLinks = '<a href="https://www.facebook.com/search/posts/?q=%23' + tagCamelCase + '">Facebook</a> | \
-  <a href="https://github.com/topics/' + tagDash + 'e">GitHub</a> | \
+  <a href="https://github.com/topics/' + tagDash + '">GitHub</a> | \
   <a href="https://www.instagram.com/explore/tags/' + tagClean + '">Instagram</a> | \
   <a href="https://www.linkedin.com/search/results/content/?keywords=%23' + tagCamelCase + '">LinkedIn</a> | \
   <a href="https://medium.com/search?q=%23' + tagCamelCase + '">Medium</a> | \
@@ -79,15 +86,50 @@ function tagSearchLinks(el) {
   $(el).find('.tag-searchlinks').html(searchLinks);
 }
 
+function wikidataPopulate(el) {
+  console.log('wikidataPopulate', el);
+  let wikidataItem = $(el).find('[itemprop="sameAs"]').text() || '';
+  let output = $(el).find('.tag-signifo');
 
-// For each tag...
-$('#tags-container > article').each(function(index, element) {
-  const tagUid = $(element).find('[itemprop="name"]').prop('id');
-
-  //console.log('tagUid', tagUid);
-  if (tagUid == 'artificial-intelligence') {
-    console.log('oioioi', element);
-    tagSearchLinks(element);
+  console.log(wikidataItem, wikidataResultAll[wikidataItem]);
+  if (wikidataItem && wikidataResultAll[wikidataItem]) {
+    console.log('eeeeei ei eimael um democraca cristao', output);
+    output.html(JSON.stringify(wikidataResultAll[wikidataItem]));
   }
-  //console.log(($(element).find('[itemprop="name"]')).prop('id'));
-});
+
+}
+
+function prepareWikidataInfo() {
+  console.log('prepareWikidataInfo start');
+  $('#tags-container > article').each(function(index, element) {
+
+    wikidataPopulate(element);
+
+    /*
+    const tagUid = $(element).find('[itemprop="name"]').prop('id');
+
+    if (tagUid == 'artificial-intelligence') {
+      console.log('oioioi', element);
+      tagSearchLinks(element);
+    }
+    */
+  });
+}
+
+function prepareSearchLinks() {
+  $('#tags-container > article').each(function(index, element) {
+
+    tagSearchLinks(element);
+
+    /*
+    const tagUid = $(element).find('[itemprop="name"]').prop('id');
+
+    if (tagUid == 'artificial-intelligence') {
+      console.log('oioioi', element);
+      tagSearchLinks(element);
+    }
+    */
+  });
+}
+
+prepareSearchLinks();
