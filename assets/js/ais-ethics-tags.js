@@ -9,6 +9,17 @@
 console.log('test from ais-ethics-tags.js');
 
 let wikidataResultAll;
+const wikidataItemsAll = [
+  'Q8458',  // human rights
+  'Q11660', // artificial intelligence
+  'Q7692538', // Technological unemployment
+  'Q25378861' // Lethal autonomous weapon
+];
+let ToC = {
+  en: [],
+  es: [],
+  pt: []
+};
 
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Dragon&languages=en|pt|es|eo&props=sitelinks|labels|aliases|descriptions&callback=?&format=jsonfm
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&ids=Q11660&languages=en|pt|es|eo&props=sitelinks|labels|aliases|descriptions&callback=?&format=jsonfm
@@ -44,12 +55,6 @@ function wikidata(el, items) {
   })
 }
 
-const wikidataItemsAll = [
-  'Q8458',  // human rights
-  'Q11660', // artificial intelligence
-  'Q7692538', // Technological unemployment
-  'Q25378861' // Lethal autonomous weapon
-];
 
 wikidata($('.output-test'), wikidataItemsAll.join('|'));
 
@@ -107,11 +112,6 @@ function prepareWikidataInfo() {
 
 // Loop that can work even if external data fail
 function mainLoop() {
-  let ToC = {
-    en: [],
-    es: [],
-    pt: []
-  };
 
   // For each tag container...
   $('#tags-container > article').each(function(index, element) {
