@@ -1,9 +1,15 @@
+/**
+ * Public Domain (un)license: To the extent possible under law, Emerson Rocha
+ * has waived all copyright and related or neighboring rights to this work to
+ * Public Domain
+ */
+
 /*
 -bf-              _____     ..,----'""`-._
              _.--' _   ``--..\_.          `-=._   (\_ _
 ...______..-'     , >_.-.       \___....-''_   `.--" (O,__,-(   ]b-=,
     ''----.,.--'"`\__,._\\-...______..|__,__\\-..-.____.____<   _/`(/(
-
+  Hic sunt dracones
 */
 
 console.log('test from ais-ethics-tags.js');
@@ -20,6 +26,7 @@ let ToC = {
   es: [],
   pt: []
 };
+let jsonpResponseLast = null;
 
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Dragon&languages=en|pt|es|eo&props=sitelinks|labels|aliases|descriptions&callback=?&format=jsonfm
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&ids=Q11660&languages=en|pt|es|eo&props=sitelinks|labels|aliases|descriptions&callback=?&format=jsonfm
@@ -27,6 +34,21 @@ let ToC = {
 
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=?&format=jsonfm&ids=Q11660
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=?&format=json&ids=Q11660
+
+function AISvanillaJsonp(url, cbName) {
+  let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=vanillaJsonpCallback&format=json&ids=Q11660';
+  let scriptEl = document.createElement('script');
+  scriptEl.setAttribute('src', url2);
+  document.body.appendChild(scriptEl);
+}
+function AISvanillaJsonpCallback(data) {
+  console.log(data);
+  jsonpResponseLast = data;
+}
+
+function AISWikidataLoad(){
+
+}
 
 
 function wikidata(el, items) {
