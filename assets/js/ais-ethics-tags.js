@@ -13,6 +13,8 @@
 */
 
 
+
+
 /** @namespace */
 const AISTag = {};
 
@@ -53,11 +55,25 @@ function AISWikidataLoad(){
 }
 
 /**
+ * Since all the important data is on the HTML markup, what data we know about it?
+ *
+ * @returns {Object}
+ */
+AISTag.whatPageIs = function() {
+  let page = {};
+  page.availableLanguages = document.querySelector('[property="available-languages"]').content.split(',');
+  page.wikidataItems = Array.from(document.querySelectorAll('#wikidata-container [itemprop="name"]')).map(function(el) {
+    return el.id;
+  });
+  return page;
+}
+
+/**
  * What we know about the browser of the intelligent agent accessing our site?
  *
  * @returns {Object}
  */
-AISTag.WhoAmI = function() {
+AISTag.whoAmI = function() {
   let me = {};
   me.myLanguage = navigator.language || navigator.userLanguage;
   me.myLanguages = navigator.languages || [me.myLanguage];
@@ -232,4 +248,5 @@ function mainLoop() {
 
 mainLoop();
 
-console.log(AISTag.WhoAmI());
+console.log('Who I am?', AISTag.whoAmI());
+console.log('What Page is?', AISTag.whatPageIs());

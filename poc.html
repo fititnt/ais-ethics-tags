@@ -15,13 +15,15 @@
   <link rel="canonical" href="{{ site.url }}" />
   <meta property="og:url" content="{{ site.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
-  <script type="application/ld+json">
-{"name":"{{ site.title }}","description":"{{ site.description }}","@type":"WebSite","url":"http://localhost:4000/","headline":"A/IS Ethics Tags - Etica.AI","@context":"http://schema.org"}
-  </script>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <meta itemprop="name" content="{{ site.title }}" />
+  <meta itemprop="headline" content="{{ site.title }}" />
+  <meta itemprop="description" content="{{ site.description }}" />
+  <!-- @TODO replace next meta with some implementation of availableLanguage, see https://schema.org/availableLanguage and https://tools.ietf.org/html/bcp47 (fititnt, 2019-04-14 04:48 BRT) -->
+  <meta property="available-languages" content="en,es,pt"/>
 
   <div>
     <a class="skip-main" href="#english">English</a>
@@ -748,7 +750,7 @@ This full term is too big to have a simple work in English. Review later (fititn
 
       <p>To the extent possible under law, <a href="https://github.com/fititnt">Emerson Rocha</a>
         has waived all copyright and related or neighboring rights to this work to
-        <a href="/UNLICENSE">Public Domain</a>.</p>
+        <a rel="license" itemprop="license" href="/UNLICENSE" >Public Domain</a>.</p>
 
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
         This site is open source. <a href="https://github.com/fititnt/ais-ethics-tags/edit/gh-pages/README.md">Improve
