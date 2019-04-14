@@ -1,8 +1,8 @@
 /**
- * Public Domain (un)license: To the extent possible under law, Emerson Rocha
- * has waived all copyright and related or neighboring rights to this work to
- * Public Domain
- */
+ * @license      Public Domain
+ * @author       Emerson Rocha <rocha(at)ieee.org>
+ * @description  Improve usability of the tags.etica.ai.
+ **/
 
 /*
 -bf-              _____     ..,----'""`-._
@@ -12,7 +12,9 @@
   Hic sunt dracones
 */
 
-console.log('test from ais-ethics-tags.js');
+
+/** @namespace */
+const AISTag = {};
 
 let wikidataResultAll;
 const wikidataItemsAll = [
@@ -35,13 +37,13 @@ let jsonpResponseLast = null;
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=?&format=jsonfm&ids=Q11660
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=?&format=json&ids=Q11660
 
-function AISvanillaJsonp(url, cbName) {
+AISTag.vanillaJsonp = function (url, cbName) {
   let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=vanillaJsonpCallback&format=json&ids=Q11660';
   let scriptEl = document.createElement('script');
   scriptEl.setAttribute('src', url2);
   document.body.appendChild(scriptEl);
 }
-function AISvanillaJsonpCallback(data) {
+AISTag.vanillaJsonpCallback = function (data) {
   console.log(data);
   jsonpResponseLast = data;
 }
@@ -50,8 +52,22 @@ function AISWikidataLoad(){
 
 }
 
+/**
+ * What we know about the browser of the intelligent agent accessing our site?
+ *
+ * @returns {Object}
+ */
+AISTag.WhoAmI = function() {
+  let me = {};
+  me.myLanguage = navigator.language || navigator.userLanguage;
+  me.myLanguages = navigator.languages || [me.myLanguage];
+  return me;
+}
 
-function wikidata(el, items) {
+/**
+* @deprecated rewrite to not depend more on jQuery or remove it
+*/
+AISTag.wikidata = function (el, items) {
   if (!items) {
     items = 'Q11660|Q8458|Q25378861'
   }
@@ -64,7 +80,7 @@ function wikidata(el, items) {
     console.log('wikidata done', el, items, html);
     if (html && html.entities) {
       wikidataResultAll = html.entities;
-      prepareWikidataInfo();
+      AISTag.prepareWikidataInfo();
     } else {
       console.log('wikidata failed');
     }
@@ -78,14 +94,21 @@ function wikidata(el, items) {
 }
 
 
-wikidata($('.output-test'), wikidataItemsAll.join('|'));
+AISTag.wikidata($('.output-test'), wikidataItemsAll.join('|'));
 
-
-function wikidataPreload(cb, wikidataItemsAll) {
+/**
+* @deprecated remove wikidataPreload
+*/
+AISTag.wikidataPreload = function (cb, wikidataItemsAll) {
   //...
 }
 
-function tagSearchLinks(el) {
+/**
+* TODO Add tagSearchLinks description
+*
+* @param {HTMLElement} el - Element to populate
+*/
+AISTag.tagSearchLinks = function (el) {
   let tagCamelCase = $(el).find('.tag-camelcase').text() || '';
   let tagDash = $(el).find('.tag-dash').text() || tagCamelCase.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
   let tagClean = $(el).find('.tag-clean').text() || tagDash.replace('/-/g', '');
@@ -109,7 +132,12 @@ function tagSearchLinks(el) {
   $(el).find('.tag-searchlinks').html(searchLinks);
 }
 
-function wikidataPopulate(el) {
+/**
+* Represents a book.
+*
+* @param {HTMLElement} el - Element to populate
+*/
+AISTag.wikidataPopulate = function (el) {
   // console.log('wikidataPopulate', el);
   let wikidataItem = $(el).find('[itemprop="sameAs"]').text() || '';
   let output = $(el).find('.tag-signifo');
@@ -122,12 +150,15 @@ function wikidataPopulate(el) {
 
 }
 
-// Loop that depends from externa data
-function prepareWikidataInfo() {
+
+/**
+* Loop that depends from externa data
+*/
+AISTag.prepareWikidataInfo = function () {
   console.log('prepareWikidataInfo start');
   $('#tags-container > article').each(function(index, element) {
 
-    wikidataPopulate(element);
+    AISTag.wikidataPopulate(element);
 
   });
 }
@@ -139,7 +170,7 @@ function mainLoop() {
   $('#tags-container > article').each(function(index, element) {
 
     // Build the search links
-    tagSearchLinks(element);
+    AISTag.tagSearchLinks(element);
 
     // TODO: otimize this 3x copypasta (fititnt, 2019-04-13 06:49 BRT)
     if (element.dataset.tagLangs) {
@@ -200,3 +231,5 @@ function mainLoop() {
 }
 
 mainLoop();
+
+console.log(AISTag.WhoAmI());
