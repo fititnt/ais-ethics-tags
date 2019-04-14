@@ -15,16 +15,45 @@
 
 
 
-/** @namespace */
+/**
+ * Manage the logic
+ * @namespace
+ **/
 const AISTag = {};
 
+/**
+ * Manage the logic
+ * @namespace
+ **/
+const AISTagUI = {};
+
+AISTag.state = {
+  user: null,
+  page: null,
+  wikidata: null
+};
+
+
+/**
+* @constant    {Array}  Wikidata items
+* @deprecated  Use AISTag.whatPageIs()
+*/
 let wikidataResultAll;
+
+/**
+ * @constant    {Array}  Wikidata items
+ * @deprecated  Use AISTag.whatPageIs()
+ */
 const wikidataItemsAll = [
   'Q8458',  // human rights
   'Q11660', // artificial intelligence
   'Q7692538', // Technological unemployment
   'Q25378861' // Lethal autonomous weapon
 ];
+
+/**
+ * @var {Object} Table of Contents
+ */
 let ToC = {
   en: [],
   es: [],
@@ -50,8 +79,18 @@ AISTag.vanillaJsonpCallback = function (data) {
   jsonpResponseLast = data;
 }
 
+
+
 function AISWikidataLoad(){
 
+}
+
+/**
+ * Initialize
+ */
+AISTag.init = function() {
+  console.log('Who I am?', AISTag.whoAmI());
+  console.log('What Page is?', AISTag.whatPageIs());
 }
 
 /**
@@ -65,6 +104,7 @@ AISTag.whatPageIs = function() {
   page.wikidataItems = Array.from(document.querySelectorAll('#wikidata-container [itemprop="name"]')).map(function(el) {
     return el.id;
   });
+  AISTag.state.page = page;
   return page;
 }
 
@@ -77,6 +117,7 @@ AISTag.whoAmI = function() {
   let me = {};
   me.myLanguage = navigator.language || navigator.userLanguage;
   me.myLanguages = navigator.languages || [me.myLanguage];
+  AISTag.state.user = me;
   return me;
 }
 
@@ -84,6 +125,7 @@ AISTag.whoAmI = function() {
 * @deprecated rewrite to not depend more on jQuery or remove it
 */
 AISTag.wikidata = function (el, items) {
+  console.log('wikidata: rewrite to not depend more on jQuery or remove it.');
   if (!items) {
     items = 'Q11660|Q8458|Q25378861'
   }
@@ -110,7 +152,7 @@ AISTag.wikidata = function (el, items) {
 }
 
 
-AISTag.wikidata($('.output-test'), wikidataItemsAll.join('|'));
+// AISTag.wikidata($('.output-test'), wikidataItemsAll.join('|'));
 
 /**
 * @deprecated remove wikidataPreload
@@ -149,11 +191,13 @@ AISTag.tagSearchLinks = function (el) {
 }
 
 /**
-* Represents a book.
+* @deprecated  Remove it (fititnt, 2019-04-14 05:54 BRT)
 *
 * @param {HTMLElement} el - Element to populate
 */
 AISTag.wikidataPopulate = function (el) {
+  console.log('wikidataPopulate deprecated.');
+
   // console.log('wikidataPopulate', el);
   let wikidataItem = $(el).find('[itemprop="sameAs"]').text() || '';
   let output = $(el).find('.tag-signifo');
@@ -169,8 +213,11 @@ AISTag.wikidataPopulate = function (el) {
 
 /**
 * Loop that depends from externa data
+*
+* @deprecated  Remove it (fititnt, 2019-04-14 05:54 BRT)
 */
 AISTag.prepareWikidataInfo = function () {
+  console.log('prepareWikidataInfo deprecated.');
   console.log('prepareWikidataInfo start');
   $('#tags-container > article').each(function(index, element) {
 
@@ -248,5 +295,4 @@ function mainLoop() {
 
 mainLoop();
 
-console.log('Who I am?', AISTag.whoAmI());
-console.log('What Page is?', AISTag.whatPageIs());
+AISTag.init();
