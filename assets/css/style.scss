@@ -50,3 +50,23 @@ a.skip-main:focus, a.skip-main:active {
 .skipnav { text-align: left; }
 .skipnav a { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .skipnav a:focus, .skipnav a:active { position: static; left: 0; width: auto; height: auto; overflow: visible; text-decoration: underline; }
+
+/* @see https://www.bryanbraun.com/anchorjs/#section-ids */
+/* @see https://css-tricks.com/on-target/#article-header-id-3 */
+/* @TODO: improve (or remove) these transitions (fititnt, 2019-04-14 06:57 BRT) */
+
+:target {
+  animation: highlight 2s ease;
+  transform: translateX(20px);
+}
+@keyframes highlight {
+  0% { border-left-color: yellow; }
+  100% { border-left-color: white; }
+}
+#tags-container > article, #wikidata-container > article  {
+  border-left: 40px solid white;
+  padding: 10px;
+  transition: all 0.5s ease;
+  padding-right: 50px;
+  margin-left: -20px;
+}
