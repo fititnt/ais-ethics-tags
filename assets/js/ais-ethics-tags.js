@@ -72,7 +72,7 @@ let jsonpResponseLast = null;
 
 AISTag.vanillaJsonp = function () {
   let wkItems = AISTag.state.page.wikidataItems.join('|');
-  let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=AISTag.vanillaJsonpCallback&format=json&ids=' + wkItems;
+  let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks/urls|labels|aliases|descriptions&callback=AISTag.vanillaJsonpCallback&format=json&ids=' + wkItems;
   let scriptEl = document.createElement('script');
   scriptEl.setAttribute('src', url2);
   document.body.appendChild(scriptEl);
@@ -140,7 +140,7 @@ AISTag.loopWikidata = function () {
   for (let i = 0; i < wks.length; ++i) {
     let wdId = wks[i].id;
     wks[i];
-    console.log('loopWikidata', i, wks[i], wks[i].id, AISTag.state.wikidata[wks[i].id]);
+    // console.log('loopWikidata', i, wks[i], wks[i].id, AISTag.state.wikidata[wks[i].id]);
     if (AISTag.state.wikidata[wdId]) {
       if (AISTag.debug) {
         let raw = JSON.stringify(AISTag.state.wikidata[wdId], null, 2);
@@ -163,6 +163,43 @@ AISTag.whatPageIs = function() {
   page.availableLanguages = document.querySelector('[property="available-languages"]').content.split(',');
   page.wikidataItems = Array.from(document.querySelectorAll('#wikidata-container > article')).map(function(el) {
     return el.id;
+  });
+  page.tags = Array.from(document.querySelectorAll('#tags-container > article')).map(function(el) {
+    //let wdInfo = '@todo';
+    let wdInfo = {};
+    let wdEls = el.querySelectorAll('[itemprop="sameAs"]');
+    for (let i=0; i < wdEls.length; ++i) {
+      let wdCode = wdEls[i].innerText;
+      wdEls[i];
+      // console.log('eeee', wdEls[i].innerText);
+      wdInfo[wdCode] = {};
+      // console.log('aaaaa', wdEls[i].dataset);
+      //for (let j = 0; j < wdEls[i].dataset.length; ++j) {
+      //  console.log('bbbbb', wdEls[i].dataset[j]);
+      //}
+      for (var key in wdEls[i].dataset) {
+        if (wdEls[i].dataset.hasOwnProperty(key)) {
+          // console.log('cccc', key, wdEls[i].dataset[key]);
+          if (key.indexOf('tagWd') > -1) {
+            // console.log('dddd', key, key.replace('tagWd', '').toLocaleLowerCase())
+            wdInfo[wdCode][key.replace('tagWd', '').toLocaleLowerCase()] = {};
+          }
+        }
+      }
+    }
+
+    //wkInfo
+
+    return {
+      'id': el.id,
+      'tags': Array.from(el.querySelectorAll('kbd')).map(function(el2) {
+        return {
+          type: el2.className.replace('tag-', ''),
+          value: el2.textContent
+        };
+      }),
+      wikidata: wdInfo
+    };
   });
   AISTag.state.page = page;
   return page;
@@ -264,15 +301,14 @@ AISTag.UIWikidata = function (el, wkInfo, tagsInfo){
             html += '<li lang="' + key + '">' + wkInfo.descriptions[key].value + '</li>';
           }
           if (wkInfo.sitelinks[key + 'wiki']) {
-            let wikipediaLink = 'https://' + key + '.wikipedia.org/wiki/' + wkInfo.sitelinks[key + 'wiki'].title.replace(/\s/g, "_");
-
-            html += '<li lang="' + key + '"><a href="' + wikipediaLink + '">' + wikipediaLink + '</a></li>';
+            //let wikipediaLink = 'https://' + key + '.wikipedia.org/wiki/' + wkInfo.sitelinks[key + 'wiki'].title.replace(/\s/g, "_");
+            html += '<li lang="' + key + '"><a href="' + wkInfo.sitelinks[key + 'wiki'].url + '">' + wkInfo.sitelinks[key + 'wiki'].url + '</a></li>';
           }
           html += '</ul>';
           html += '</div>';
       }
   }
-  console.log('AISTag.UIWikidata', wkInfo.labels);
+  // console.log('AISTag.UIWikidata', wkInfo.labels);
   el.querySelector('.wikidata-item-info').innerHTML = html;
 }
 
@@ -355,7 +391,7 @@ AISTag.loopTags = function () {
     }
 
   });
-  console.log('eetoc', ToC);
+  // console.log('eetoc', ToC);
 
   // TODO: otimize this 3x copypasta (fititnt, 2019-04-13 07:02 BRT)
   if (ToC.en) {
