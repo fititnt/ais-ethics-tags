@@ -12,8 +12,8 @@
   Hic sunt dracones
 */
 
-
-
+// To debug:
+// localStorage.setItem('debug', '1');
 
 /**
  * Manage the logic
@@ -27,7 +27,7 @@ const AISTag = {};
  **/
 //const AISTagUI = {};
 
-AISTag.debug = true;
+AISTag.debug = null;
 
 AISTag.state = {
   user: null,
@@ -90,9 +90,12 @@ AISTag.vanillaJsonpCallback = function (data) {
  * Inicialize
  */
 AISTag.init = function() {
+  AISTag.debug = localStorage.getItem('debug');
+
   if (AISTag.debug) {
-    AISTag.initDebug();
-    return;
+    document.getElementsByTagName('body')[0].classList.add('ais-debug-on');
+    // AISTag.initDebug();
+    // return;
   }
 
   console.log('Who I am?', AISTag.whoAmI());
@@ -143,6 +146,7 @@ AISTag.loopWikidata = function () {
         let raw = JSON.stringify(AISTag.state.wikidata[wdId], null, 2);
         wks[i].querySelector('.wikidata-item-raw').innerText = raw;
       }
+      AISTag.UIWikidata(wks[i], AISTag.state.wikidata[wdId]);
     } else {
       console.log('AISTag.loopWikidata ERROR', wdId, AISTag.state.wikidata);
     }
@@ -246,6 +250,30 @@ AISTag.UITagSearchBar = function (el) {
   <a href="https://www.youtube.com/results?search_query=%23' + tagCamelCase + '">Youtube</a>';
 
   $(el).find('.tag-searchlinks').html(searchLinks);
+}
+
+AISTag.UIWikidata = function (el, wkInfo, tagsInfo){
+  let html = '<h4>Wikidata</h4>';
+  for (var key in wkInfo.labels) {
+      if (wkInfo.labels.hasOwnProperty(key)) {
+          // console.log(key + " -> " + wkInfo.labels[key]);
+          html += '<div>';
+          html += '<h5 lang="' + key + '">' + wkInfo.labels[key].value + ' <sup>(' +  key + ')</sup></h5>';
+          html += '<ul>';
+          if (wkInfo.descriptions[key]) {
+            html += '<li lang="' + key + '">' + wkInfo.descriptions[key].value + '</li>';
+          }
+          if (wkInfo.sitelinks[key + 'wiki']) {
+            let wikipediaLink = 'https://' + key + '.wikipedia.org/wiki/' + wkInfo.sitelinks[key + 'wiki'].title.replace(/\s/g, "_");
+
+            html += '<li lang="' + key + '"><a href="' + wikipediaLink + '">' + wikipediaLink + '</a></li>';
+          }
+          html += '</ul>';
+          html += '</div>';
+      }
+  }
+  console.log('AISTag.UIWikidata', wkInfo.labels);
+  el.querySelector('.wikidata-item-info').innerHTML = html;
 }
 
 /**

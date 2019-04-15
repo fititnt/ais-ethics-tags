@@ -70,3 +70,10 @@ a.skip-main:focus, a.skip-main:active {
   padding-right: 50px;
   margin-left: -20px;
 }
+
+.ais-debug-only {
+  display: none;
+}
+.ais-debug-on .ais-debug-only {
+  display: block;
+}
