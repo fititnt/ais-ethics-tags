@@ -32,7 +32,8 @@ AISTag.debug = null;
 AISTag.state = {
   user: null,
   page: null,
-  wikidata: null
+  wikidata: null,
+  relations: null
 };
 
 
@@ -83,6 +84,7 @@ AISTag.vanillaJsonpCallback = function (data) {
   // jsonpResponseLast = data;
   AISTag.state.wikidata = data.entities;
   console.log('What Wikidata?', AISTag.state.wikidata);
+  AISTag.whatRelations();
   AISTag.loopWikidata();
   AISTag.UIMyTranslations();
 }
@@ -107,6 +109,7 @@ AISTag.init = function() {
 
 
   // AISTag.loopWikidata(); // called by wikitada callback
+  // AISTag.whatRelations() // called by wikitada callback
   // AISTag.UIMyTranslations(); // called by wikitada callback
 }
 
@@ -141,7 +144,7 @@ AISTag.loopWikidata = function () {
 
   for (let i = 0; i < wks.length; ++i) {
     let wdId = wks[i].id;
-    wks[i];
+    // wks[i];
     // console.log('loopWikidata', i, wks[i], wks[i].id, AISTag.state.wikidata[wks[i].id]);
     if (AISTag.state.wikidata[wdId]) {
       if (AISTag.debug) {
@@ -194,6 +197,7 @@ AISTag.whatPageIs = function() {
 
     return {
       'id': el.id,
+      'title': el.querySelector('[itemprop="name"]').innerText,
       'tags': Array.from(el.querySelectorAll('kbd')).map(function(el2) {
         return {
           type: el2.className.replace('tag-', ''),
@@ -205,6 +209,43 @@ AISTag.whatPageIs = function() {
   });
   AISTag.state.page = page;
   return page;
+}
+
+/**
+ * Return some extra relations
+ */
+AISTag.whatRelations = function() {
+  AISTag.state.relations = {
+    wkToTags: {}
+  };
+  //console.log('AISTag.whatRelations', AISTag.state.relations);
+  //console.log(',,,', AISTag.state.wikidata, AISTag.state.page.tags);
+  for (let key in AISTag.state.wikidata) {
+    if (AISTag.state.wikidata.hasOwnProperty(key)) {
+      for (let i=0; i < AISTag.state.page.tags.length; ++i) {
+        if (AISTag.state.page.tags[i].wikidata[key]) {
+          console.log('eee1234', AISTag.state.page.tags[i].wikidata[key]);
+          for (let key2 in AISTag.state.page.tags[i].wikidata[key]) {
+            if (AISTag.state.page.tags[i].wikidata[key].hasOwnProperty(key2)) {
+              if (!AISTag.state.relations.wkToTags[key]) {
+                AISTag.state.relations.wkToTags[key] = {};
+              }
+              if (!AISTag.state.relations.wkToTags[key][key2]) {
+                AISTag.state.relations.wkToTags[key][key2] = [];
+              }
+              AISTag.state.relations.wkToTags[key][key2].push({
+                id: AISTag.state.page.tags[i].id,
+                title: AISTag.state.page.tags[i].title
+              });
+            }
+          }
+          // AISTag.state.relations.wkToTags[key] = {}
+        }
+      }
+    }
+  }
+  return AISTag.state.relations;
+  console.log('AISTag.whatRelations end', AISTag.state.relations);
 }
 
 /**
@@ -266,12 +307,14 @@ AISTag.wikidataPreload = function (cb, wikidataItemsAll) {
  * Add translations based on the user preferred languages
  * Depends of wikidata data to work.
  *
+ * @TODO change to accept fallback translation based on user preferences (fititnt, 2019-04-15 04:46 BRT)
+ *
  */
 AISTag.UIMyTranslations = function() {
   let languages = AISTag.state.user.myLanguages;
   let uiLang = null;
   // languages.push('en'); // fallback... just in case...
-  console.log('AISTag.UIMyTranslations', AISTag.state.user, AISTag.state.page, AISTag.state.wikidata);
+  // console.log('AISTag.UIMyTranslations', AISTag.state.user, AISTag.state.page, AISTag.state.wikidata);
   for (let i =0; i < languages.length; ++i) {
     if (AISTag.state.page.availableLanguages.indexOf(languages[i]) > -1) {
       uiLang = languages[i];
@@ -284,7 +327,7 @@ AISTag.UIMyTranslations = function() {
   for (var key in AISTag.state.wikidata) {
     if (AISTag.state.wikidata.hasOwnProperty(key)) {
       let elsQ = document.querySelectorAll('.' + key);
-      console.log('elsQ', elsQ);
+      // console.log('elsQ', elsQ);
       for (let i=0; i < elsQ.length; ++i) {
         if (AISTag.state.wikidata[key].labels[uiLang]) {
           elsQ[i].innerHTML = '<mark lang="' + uiLang + '">' + AISTag.state.wikidata[key].labels[uiLang].value + ' <sup>(' + uiLang + ')</sup></mark>';
@@ -294,8 +337,7 @@ AISTag.UIMyTranslations = function() {
       }
     }
   }
-  console.log('AISTag.UIMyTranslations uiLang', uiLang);
-
+  // console.log('AISTag.UIMyTranslations uiLang', uiLang);
 }
 
 /**
@@ -334,10 +376,32 @@ AISTag.UITagSearchBar = function (el) {
  *
  * @param {HTMLElement} el - Element to populate
  * @param {Object} wkInfo - Wikidata Object response
- * @param {Object} tagsInfo - Informations about tags used on the document
  */
-AISTag.UIWikidata = function (el, wkInfo, tagsInfo){
-  let html = '<h4>Wikidata</h4>';
+AISTag.UIWikidata = function (el, wkInfo){
+  let html = '<h4>Tags</h4>';
+  html += '<ul>';
+  if (AISTag.state.relations.wkToTags[el.id]) {
+    console.log('AISTag.UIWikidata asdasdasd', AISTag.state.relations.wkToTags[el.id]);
+    for (var key in AISTag.state.relations.wkToTags[el.id]) {
+      if (AISTag.state.relations.wkToTags[el.id].hasOwnProperty(key)) {
+        //html += '<h5>' + key + '</h5>';
+        //html += '<ul>';
+        console.log('oioioioi', AISTag.state.relations.wkToTags[el.id], AISTag.state.relations.wkToTags[el.id][key].length);
+        for (let i=0; i < AISTag.state.relations.wkToTags[el.id][key].length; ++i) {
+          console.log('oioioioi')
+          html += '<li><span lang="' + key + '"><a href="#' + AISTag.state.relations.wkToTags[el.id][key][i].id + '">' +  AISTag.state.relations.wkToTags[el.id][key][i].title + '<sup> (' + key + ')</sup></span></a></li>';
+        }
+        //html += '</ul>';
+      }
+    }
+  } else {
+    console.log('AISTag.UIWikidata WARNING: potential unused on tags ' + el.id);
+  }
+  html += '</ul>';
+
+  console.log(AISTag.state.relations.wkToTags);
+
+  html += '<h4>Wikidata</h4>';
   for (var key in wkInfo.labels) {
       if (wkInfo.labels.hasOwnProperty(key)) {
           // console.log(key + " -> " + wkInfo.labels[key]);
