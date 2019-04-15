@@ -86,17 +86,47 @@ AISTag.vanillaJsonpCallback = function (data) {
   AISTag.loopWikidata();
 }
 
-
 /**
- * Initialize
+ * Inicialize
  */
 AISTag.init = function() {
+  if (AISTag.debug) {
+    AISTag.initDebug();
+    return;
+  }
+
   console.log('Who I am?', AISTag.whoAmI());
   console.log('What Page is?', AISTag.whatPageIs());
 
   AISTag.loopTags();
   AISTag.vanillaJsonp();
+
+
   // AISTag.loopWikidata(); // called by wikitada callback
+}
+
+/**
+ * Inicialize debug mode
+ */
+AISTag.initDebug = function() {
+  let newScript = document.createElement('script');
+  let firstScript = document.getElementsByTagName('script')[0];
+  newScript.async = true;
+  newScript.src = "/assets/js/ais-ethics-tags-plus.js?" + Math.round(new Date().getTime() / 1000);
+  firstScript.parentNode.insertBefore(newScript, firstScript);
+
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log('AISTag.initDebug: improve this. Or not, since is just for debugging...')
+    // console.log('oioioi2222')
+    // AISTagPlus.init();
+    setTimeout(function() {
+      AISTagPlus.init();
+    }, 500);
+  });
+
+  //document.getElementsByTagName('head')[0].appendChild(script);
+
+  // document.write('<script src="' + "/assets/js/ais-ethics-tags-plus.js" + '"></script>');
 }
 
 AISTag.loopWikidata = function () {
