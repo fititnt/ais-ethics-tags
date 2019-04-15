@@ -84,6 +84,7 @@ AISTag.vanillaJsonpCallback = function (data) {
   AISTag.state.wikidata = data.entities;
   console.log('What Wikidata?', AISTag.state.wikidata);
   AISTag.loopWikidata();
+  AISTag.UIMyTranslations();
 }
 
 /**
@@ -106,6 +107,7 @@ AISTag.init = function() {
 
 
   // AISTag.loopWikidata(); // called by wikitada callback
+  // AISTag.UIMyTranslations(); // called by wikitada callback
 }
 
 /**
@@ -259,6 +261,43 @@ AISTag.wikidataPreload = function (cb, wikidataItemsAll) {
   //...
 }
 
+
+/**
+ * Add translations based on the user preferred languages
+ * Depends of wikidata data to work.
+ *
+ */
+AISTag.UIMyTranslations = function() {
+  let languages = AISTag.state.user.myLanguages;
+  let uiLang = null;
+  // languages.push('en'); // fallback... just in case...
+  console.log('AISTag.UIMyTranslations', AISTag.state.user, AISTag.state.page, AISTag.state.wikidata);
+  for (let i =0; i < languages.length; ++i) {
+    if (AISTag.state.page.availableLanguages.indexOf(languages[i]) > -1) {
+      uiLang = languages[i];
+      break
+    } else {
+      console.log('AISTag.UIMyTranslations: sorry, no ' + languages[i] + ' lang');
+    }
+  }
+
+  for (var key in AISTag.state.wikidata) {
+    if (AISTag.state.wikidata.hasOwnProperty(key)) {
+      let elsQ = document.querySelectorAll('.' + key);
+      console.log('elsQ', elsQ);
+      for (let i=0; i < elsQ.length; ++i) {
+        if (AISTag.state.wikidata[key].labels[uiLang]) {
+          elsQ[i].innerHTML = '<mark lang="' + uiLang + '">' + AISTag.state.wikidata[key].labels[uiLang].value + ' <sup>(' + uiLang + ')</sup></mark>';
+        } else {
+          console.log('AISTag.UIMyTranslations soft fail for key ' + key + ' and uiLang ' + uiLang);
+        }
+      }
+    }
+  }
+  console.log('AISTag.UIMyTranslations uiLang', uiLang);
+
+}
+
 /**
 * Add links to search the tag on external sites
 * @todo  rewrite to not need jQuery (fititnt, 2019-04-21)
@@ -289,6 +328,14 @@ AISTag.UITagSearchBar = function (el) {
   $(el).find('.tag-searchlinks').html(searchLinks);
 }
 
+
+/**
+ * Add extra information to Wikidata section
+ *
+ * @param {HTMLElement} el - Element to populate
+ * @param {Object} wkInfo - Wikidata Object response
+ * @param {Object} tagsInfo - Informations about tags used on the document
+ */
 AISTag.UIWikidata = function (el, wkInfo, tagsInfo){
   let html = '<h4>Wikidata</h4>';
   for (var key in wkInfo.labels) {
@@ -311,6 +358,7 @@ AISTag.UIWikidata = function (el, wkInfo, tagsInfo){
   // console.log('AISTag.UIWikidata', wkInfo.labels);
   el.querySelector('.wikidata-item-info').innerHTML = html;
 }
+
 
 /**
 * @deprecated  Remove it (fititnt, 2019-04-14 05:54 BRT)
