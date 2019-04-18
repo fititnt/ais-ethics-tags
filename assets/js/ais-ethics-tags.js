@@ -211,7 +211,7 @@ AISTag.UIMyTranslations = function () {
 AISTag.UITagSearchBar = function (el) {
   //let tagCamelCase = $(el).find('.tag-camelcase').text() || '';
   let _tagCamelCase = el.querySelector('.tag-camelcase');
-  let _tagDash = el.querySelector('.tag-camelcase');
+  let _tagDash = el.querySelector('.tag-dash');
   let _tagClean = el.querySelector('.tag-camelcase');
   let tagCamelCase = _tagCamelCase ? _tagCamelCase.innerText : '';
   let tagDash = _tagDash ? _tagDash.innerText : tagCamelCase.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
