@@ -15,6 +15,9 @@
 // To debug:
 // localStorage.setItem('debug', '1');
 
+// TODO: clean up jQuery usages (fititnt, 2019-04-17 23:18 BRT)
+// TODO: clean up non-used methods from first HTML PoC (fititnt, 2019-04-17 23:19 BRT)
+
 /**
  * Manage the logic
  * @namespace
@@ -71,6 +74,13 @@ let jsonpResponseLast = null;
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=?&format=jsonfm&ids=Q11660
 // https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks|labels|aliases|descriptions&callback=?&format=json&ids=Q11660
 
+
+/**
+ * VanillaJS JSONP
+ *
+ * @see AISTag.vanillaJsonpCallback()
+ *
+ */
 AISTag.vanillaJsonp = function () {
   let wkItems = AISTag.state.page.wikidataItems.join('|');
   let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks/urls|labels|aliases|descriptions&callback=AISTag.vanillaJsonpCallback&format=json&ids=' + wkItems;
@@ -79,11 +89,18 @@ AISTag.vanillaJsonp = function () {
   document.body.appendChild(scriptEl);
 }
 
+/**
+ * VanillaJS JSONP, the Callback
+ *
+ * @see AISTag.vanillaJsonp()
+ *
+ * @param  {Object}   data  The data result from Wikidata
+ */
 AISTag.vanillaJsonpCallback = function (data) {
   // console.log('AISTag.vanillaJsonpCallback', data);
   // jsonpResponseLast = data;
   AISTag.state.wikidata = data.entities;
-  console.log('What Wikidata?', AISTag.state.wikidata);
+  AISTag.debug && console.log('What Wikidata?', AISTag.state.wikidata);
   AISTag.whatRelations();
   AISTag.loopWikidata();
   AISTag.UIMyTranslations();
@@ -101,8 +118,8 @@ AISTag.init = function() {
     // return;
   }
 
-  console.log('Who I am?', AISTag.whoAmI());
-  console.log('What Page is?', AISTag.whatPageIs());
+  console.log('AISTag.init: Who I am?', AISTag.whoAmI());
+  console.log('AISTag.init: What Page is?', AISTag.whatPageIs());
 
   AISTag.loopTags();
   AISTag.vanillaJsonp();
@@ -115,6 +132,8 @@ AISTag.init = function() {
 
 /**
  * Inicialize debug mode
+ *
+ * @deprecated  Not used. Maybe consider usage on the future, but not now (fititnt, 2019-04-17 23:31 BRT)
  */
 AISTag.initDebug = function() {
   let newScript = document.createElement('script');
@@ -137,6 +156,9 @@ AISTag.initDebug = function() {
   // document.write('<script src="' + "/assets/js/ais-ethics-tags-plus.js" + '"></script>');
 }
 
+/**
+ * Loop Wikidata section of main HTML page
+ */
 AISTag.loopWikidata = function () {
   const wks = document.querySelectorAll('#wikidata-container > article');
 
@@ -245,7 +267,6 @@ AISTag.whatRelations = function() {
     }
   }
   return AISTag.state.relations;
-  console.log('AISTag.whatRelations end', AISTag.state.relations);
 }
 
 /**
@@ -342,14 +363,17 @@ AISTag.UIMyTranslations = function() {
 
 /**
 * Add links to search the tag on external sites
-* @todo  rewrite to not need jQuery (fititnt, 2019-04-21)
 *
 * @param {HTMLElement} el - Element to populate
 */
 AISTag.UITagSearchBar = function (el) {
-  let tagCamelCase = $(el).find('.tag-camelcase').text() || '';
-  let tagDash = $(el).find('.tag-dash').text() || tagCamelCase.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
-  let tagClean = $(el).find('.tag-clean').text() || tagDash.replace('/-/g', '');
+  //let tagCamelCase = $(el).find('.tag-camelcase').text() || '';
+  let _tagCamelCase = el.querySelector('.tag-camelcase');
+  let _tagDash = el.querySelector('.tag-camelcase');
+  let _tagClean = el.querySelector('.tag-camelcase');
+  let tagCamelCase = _tagCamelCase ? _tagCamelCase.innerText : '';
+  let tagDash = _tagDash ? _tagDash.innerText : tagCamelCase.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
+  let tagClean =  _tagClean ? _tagClean.innerText : tagDash.replace('/-/g', '');
 
   if (!tagCamelCase) {
     return false;
@@ -367,7 +391,8 @@ AISTag.UITagSearchBar = function (el) {
   <a href="https://twitter.com/search?q=%23' + tagCamelCase + '">Twitter</a> | \
   <a href="https://www.youtube.com/results?search_query=%23' + tagCamelCase + '">Youtube</a>';
 
-  $(el).find('.tag-searchlinks').html(searchLinks);
+  // $(el).find('.tag-searchlinks').html(searchLinks);
+  el.querySelector('.tag-camelcase').innerHTML = searchLinks;
 }
 
 
@@ -386,9 +411,9 @@ AISTag.UIWikidata = function (el, wkInfo){
       if (AISTag.state.relations.wkToTags[el.id].hasOwnProperty(key)) {
         //html += '<h5>' + key + '</h5>';
         //html += '<ul>';
-        console.log('oioioioi', AISTag.state.relations.wkToTags[el.id], AISTag.state.relations.wkToTags[el.id][key].length);
+        // console.log('oioioioi', AISTag.state.relations.wkToTags[el.id], AISTag.state.relations.wkToTags[el.id][key].length);
         for (let i=0; i < AISTag.state.relations.wkToTags[el.id][key].length; ++i) {
-          console.log('oioioioi')
+          // console.log('oioioioi')
           html += '<li><span lang="' + key + '"><a href="#' + AISTag.state.relations.wkToTags[el.id][key][i].id + '">' +  AISTag.state.relations.wkToTags[el.id][key][i].title + '<sup> (' + key + ')</sup></span></a></li>';
         }
         //html += '</ul>';
@@ -469,7 +494,10 @@ AISTag.prepareWikidataInfo = function () {
 AISTag.loopTags = function () {
 
   // For each tag container...
-  $('#tags-container > article').each(function(index, element) {
+  const tagsContainer = [].slice.call(document.querySelectorAll('#tags-container > article'), 0);
+
+  //$('#tags-container > article').each(function(index, element) {
+  tagsContainer.forEach(function(element) {
 
     // Build the search links
     //AISTag.tagSearchLinks(element);
