@@ -4,6 +4,8 @@
 
 [![English: Tags](img/badges/language-en.svg)](#english) [![Español: Etiquetsa](img/badges/language-es.svg)](#español) [![Português: Etiquetas](img/badges/language-pt.svg)](#português)
 
+[![GitHub: fititnt/ais-ethics-tags](img/badges/github.svg)](https://github.com/fititnt/ais-ethics-tags) [![Website: tags.etica.ai](img/badges/website.svg)](https://tags.etica.ai/)
+
 <!-- ![Status: Work in Progress](img/badges/status-work-in-progress.svg)-->
 
 <!-- <strong lang="eo"><span translate="no">Etica.AI</span> Etikedoj. <sup>(eo)</sup></strong> -->
