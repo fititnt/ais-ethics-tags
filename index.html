@@ -1,0 +1,675 @@
+---
+---
+<!DOCTYPE html>
+<html lang="eo">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:locale" content="eo" />
+  <meta name="description" content="{{ site.description }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <link rel="canonical" href="{{ site.url }}" />
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <meta itemprop="name" content="{{ site.title }}" />
+  <meta itemprop="headline" content="{{ site.title }}" />
+  <meta itemprop="description" content="{{ site.description }}" />
+  <!-- @TODO replace next meta with some implementation of availableLanguage, see https://schema.org/availableLanguage and https://tools.ietf.org/html/bcp47 (fititnt, 2019-04-14 04:48 BRT) -->
+  <meta property="available-languages" content="en,es,pt"/>
+
+  <div>
+    <a class="skip-main" href="#english">English</a>
+    <a class="skip-main" href="#english-tags">Go to English Tags</a>
+    <a class="skip-main" href="#español">Español</a>
+    <a class="skip-main" href="#etiquetas-españolas">Vaya a las etiquetas del español</a>
+    <a class="skip-main" href="#português">Português</a>
+    <a class="skip-main" href="#etiquetas-do-português">Vá para etiquetas do português</a>
+  </div>
+
+  <div class="container-lg px-3 my-5 markdown-body">
+
+    <header>
+      <h1 id="ais-ethics-tags---eticaai">A/IS Ethics Tags - Etica.AI</h1>
+
+      <p><a href="https://tags.etica.ai"><img src="/img/banner-tags.png" alt="A/IS Ethics Tags - Etica.AI"></a></p>
+
+      <nav>
+        <h2 class="screen-reader-text">Quick Links</h2>
+        <a href="#english"><img src="/img/badges/language-en.svg" alt="English: Tags"></a>
+        <a href="#español"><img src="/img/badges/language-es.svg" alt="Español: Etiquetsa"></a>
+        <a href="#português"><img src="/img/badges/language-pt.svg" alt="Português: Etiquetas"></a>
+      </nav>
+      <nav>
+        <h2 class="screen-reader-text">GitHub & Website</h2>
+        <a href="https://github.com/fititnt/ais-ethics-tags">
+          <img src="img/badges/github.svg" alt="GitHub: fititnt/ais-ethics-tags">
+        </a>
+        <a href="https://tags.etica.ai/">
+          <img src="img/badges/website.svg" alt="Website: tags.etica.ai">
+        </a>
+      </nav>
+      <hr>
+
+      <!-- TODO: consider add a nav tag here and a screen-only heading to these other EticaAI sites (fititnt, 2019-04-06 05:59 BRT) -->
+    </header>
+
+    <aside>
+      <h2 class="screen-reader-text">EticaAI related sites</h2>
+      <p><em><a href="https://etica.ai">etica.ai</a> |
+          <a href="https://docs.etica.ai">docs.etica.ai</a> |
+          <a href="https://groups.etica.ai">groups.etica.ai</a> |
+          <a href="https://hfoss.etica.ai">hfoss.etica.ai</a> |
+          <a href="https://organizations.etica.ai">organizations.etica.ai</a> |
+          <a href="https://standards.etica.ai">standards.etica.ai</a> |
+          <strong>tags.etica.ai</strong></em>
+      </p>
+    </aside>
+
+    <hr>
+
+    <nav>
+      <h2 id="enhavtabelo">Enhavtabelo</h2>
+
+      <ul>
+        <li>
+          <a href="#lingvo">Lingvo</a>
+          <ul>
+            <li>
+              <a href="#english">English</a>
+              <ul>
+                <li><a href="#english-tags">English Tags</a></li>
+                <li><a href="#basic-esperanto-terms-used-in-this-document">Basic Esperanto terms used in this document</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#espa%C3%B1ol">Español</a>
+              <ul>
+                <li><a href="#etiquetas-españolas">Etiquetas españolas</a></li>
+                <li><a href="#t%C3%A9rminos-b%C3%A1sicos-en-esperanto-utilizados-en-este-documento">Términos básicos en
+                    Esperanto utilizados en este documento</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#português">Português</a>
+              <ul>
+                <li><a href="#etiquetas-do-português">Etiquetas do português</a></li>
+                <li><a href="#termos-b%C3%A1sicos-em-esperanto-usados-neste-documento">Termos básicos em Esperanto
+                    usados
+                    neste documento</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#etikedoj">Etikedoj</a>
+          <ul>
+            <li><a href="#ai">AI</a></li>
+            <li><a href="#armas-autonomas-letais">Armas Autonomas Letais</a></li>
+            <li><a href="#artificial-intelligence">Artificial Intelligence</a></li>
+            <li><a href="#direitos-humanos">Direitos Humanos</a></li>
+            <li><a href="#ethics-of-artificial-intelligence">Ethics of Artificial Intelligence</a></li>
+            <li><a href="#human-rights">Human Rights</a></li>
+            <li><a href="#ia">IA</a></li>
+            <li><a href="#inteligencia-artificial">Inteligencia Artificial</a></li>
+            <li><a href="#lethal-autonomous-weapon">Lethal Autonomous Weapon</a></li>
+            <li><a href="#technological-unemployment">Technological Unemployment</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#wikidata">Wikidata</a>
+          <ul>
+            <li><a href="#Q8458">Q8458</a> <span class="tag-mylang Q8458"></span></li>
+            <li><a href="#Q11660">Q11660</a> <span class="tag-mylang Q11660"></span></li>
+            <li><a href="#Q7692538">Q7692538</a> <span class="tag-mylang Q7692538"></span></li>
+            <li><a href="#Q1142726">Q1142726</a> <span class="tag-mylang Q1142726"></span></li>
+            <li><a href="#Q25378861">Q25378861</a> <span class="tag-mylang Q25378861"></span></li>
+          </ul>
+        </li>
+      </ul>
+
+    </nav>
+    <section>
+
+      <h2 id="lingvo">Lingvo</h2>
+
+      <h3 tabindex="-1" id="english">English</h3>
+
+      <p><strong lang="en"><a href="https://tags.etica.ai/#english">A/IS Ethics Tags - Etica.AI</a>
+          is an initiative to facilitate search of content in social networks and GitHub
+          projects related to Ethics of Autonomous and Intelligent Systems (A/IS Ethics).
+          This includes Ethics of Artificial Intelligence and social implications in the use
+          of technology.</strong></p>
+
+      <p><span lang="en">A strong concern here is to be friendly to non-English speakers
+          and people using automatic translation (we tested with Google Translator). A
+          secondary reason is to help people know the equivalent of key terms in their
+          language and the equivalent in others, but this depends on the help of the
+          community that knows other languages.</span></p>
+
+      <p><span lang="en">Help and improvements are welcome. You can contact main
+          maintainer via the e-mail <strong translate="no">rocha(at)ieee.org</strong></span>.</p>
+
+      <nav>
+        <h4 tabindex="-1" id="english-tags">English Tags</h4>
+        <ul data-tags-toc="en">
+          <!-- Items created with vanilla JavaScript based on the document HTML markup -->
+        </ul>
+      </nav>
+
+      <h4 id="basic-esperanto-terms-used-in-this-document">Basic Esperanto terms used in this document</h4>
+
+      <ul>
+        <li>
+          <strong lang="eo" translate="no">Akronimo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="en" translate="no">Acronym <sup>(en)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="en" translate="no">Table of contents <sup>(en)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Etikedoj <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="en" translate="no">Tag <sup>(en)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Signifo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="en" translate="no">Meaning <sup>(en)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Rilatoj <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="en" translate="no">Relationships <sup>(en)</sup></em></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3 tabindex="-1" id="español">Español</h3>
+
+      <p><em lang="es">Sin descripción en español en este momento.</em></p>
+
+      <p><span lang="es">Ayuda y correcciones son bienvenidas. Puede ponerse en contacto
+          con el mantenedor principal vía e-mail <strong translate="no">rocha(arroba)ieee.org</strong></span>.</p>
+
+      <nav>
+        <h4 tabindex="-1" id="etiquetas-españolas">Etiquetas españolas</h4>
+        <ul data-tags-toc="es">
+          <!-- Items created with vanilla JavaScript based on the document HTML markup -->
+        </ul>
+      </nav>
+
+      <h4 id="términos-básicos-en-esperanto-utilizados-en-este-documento">Términos básicos en Esperanto utilizados en
+        este documento</h4>
+
+      <ul>
+        <li>
+          <strong lang="eo" translate="no">Akronimo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="es" translate="no">Acrónimo <sup>(es)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="es" translate="no">Tabla de contenido <sup>(es)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Etikedoj <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="es" translate="no">Etiqueta <sup>(es)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Signifo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="es" translate="no">Sentido <sup>(es)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Rilatoj <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="es" translate="no">Relaciones <sup>(es)</sup></em></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3 tabindex="-1" id="português">Português</h3>
+
+      <p><span lang="pt"><a href="https://tags.etica.ai/#portugu%C3%AAs">A/IS Ethics Tags - Etica.AI</a>
+          é uma
+          iniciativa para facilitar busca de conteúdo em redes sociais e projetos no GitHub
+          relacionados a Ética no uso Sistemas Autônomos e Inteligentes, o que inclui
+          Ética na Inteligência Artificial e implicações sociais no uso de tecnologia.</span></p>
+
+      <p><span lang="pt">Uma forte preocupação aqui é ser amigável para não-falantes de
+          língua inglesa e pessoas que usam tradução automática (testamos com Google
+          Translator). Uma razão secundárioa é ajudar pessoas a saberem o equivalente de
+          termos-chave na língua delas e o equivalente nas demais, porém isso depende
+          de ajuda da comunidade que sabe outras línguas.</span></p>
+
+      <p><span lang="pt">Ajuda e correções são bem vindas. Pode entrar em contato com
+          mantenedor principal via o e-mail <strong translate="no">rocha(arroba)ieee.org</strong></span>.</p>
+
+      <nav>
+        <h4 tabindex="-1" id="etiquetas-do-português">Etiquetas do português</h4>
+
+        <ul data-tags-toc="pt">
+          <!-- Items created with vanilla JavaScript based on the document HTML markup -->
+        </ul>
+      </nav>
+
+      <h4 id="termos-básicos-em-esperanto-usados-neste-documento">Termos básicos em Esperanto usados neste documento</h4>
+
+      <ul>
+        <li>
+          <strong lang="eo" translate="no">Akronimo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="pt" translate="no">acrônimo <sup>(pt)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Enhavtabelo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="pt" translate="no">Índice de conteúdo <sup>(pt)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Etikedoj <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="pt" translate="no">Etiqueta <sup>(pt)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Signifo <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="pt" translate="no">Significado <sup>(pt)</sup></em></li>
+          </ul>
+        </li>
+        <li>
+          <strong lang="eo" translate="no">Rilatoj <sup>(eo)</sup></strong>
+          <ul>
+            <li><em lang="pt" translate="no">Relações <sup>(pt)</sup></em></li>
+          </ul>
+        </li>
+      </ul>
+
+    </section>
+
+    <section id="tags-container">
+      <h2 id="etikedoj">Etikedoj</h2>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="ai" data-tag-langs="en" data-tag-wd-en="Q11660">
+        <h3 itemprop="name" data-anchor-id="ai">AI</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">AI</kbd>,
+            <kbd translate="no" class="tag-dash">ai</kbd>,
+            <kbd translate="no" class="tag-clean">ai</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q11660" data-tag-wd-en>Q11660</a> <span class="tag-mylang Q11660"></span></li>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q1142726" data-tag-wd-es data-tag-wd-pt>Q1142726</a> <span class="tag-mylang Q1142726"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="armas-autonomas-letais" data-tag-langs="pt" data-tag-wd-pt="Q25378861">
+        <h3 itemprop="name" data-anchor-id="armas-autonomas-letais">Armas Autonomas Letais</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">ArmasAutonomasLetais</kbd>,
+            <kbd translate="no" class="tag-dash">armas-autonomas-letais</kbd>,
+            <kbd translate="no" class="tag-clean">armasautonomasletais</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q25378861" data-tag-wd-pt>Q25378861</a> <span class="tag-mylang Q25378861"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="artificial-intelligence" data-tag-langs="en" data-tag-wd-en="Q11660">
+        <h3 itemprop="name" data-anchor-id="artificial-intelligence">Artificial Intelligence</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">ArtificialIntelligence</kbd>,
+            <kbd translate="no" class="tag-dash">artificial-intelligence</kbd>,
+            <kbd translate="no" class="tag-clean">artificialintelligence</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q11660" data-tag-wd-en>Q11660</a> <span class="tag-mylang Q11660"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="direitos-humanos" data-tag-langs="pt" data-tag-wd-pt="Q8458">
+        <h3 itemprop="name" data-anchor-id="direitos-humanos">Direitos Humanos</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">DireitosHumanos</kbd>,
+            <kbd translate="no" class="tag-dash">direitos-humanos</kbd>,
+            <kbd translate="no" class="tag-clean">direitoshumanos</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q8458" data-tag-wd-pt>Q8458</a> <span class="tag-mylang Q8458"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="ethics-of-artificial-intelligence" data-tag-langs="en" data-tag-wd-en="Q12727779">
+        <h3 itemprop="name" data-anchor-id="ethics-of-artificial-intelligence">Ethics of Artificial Intelligence</h3>
+        <!-- @TODO This full term is too big to have a simple work in English. Review later (fititnt, 2019-04-03 23:25 BRT) -->
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>: ?</li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong>?</strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q12727779" data-tag-wd-en>Q12727779</a> <span class="tag-mylang Q12727779"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="human-rights" data-tag-langs="en" data-tag-wd-en="Q8458">
+        <h3 itemprop="name" data-anchor-id="human-rights">Human Rights</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">HumanRights</kbd>,
+            <kbd translate="no" class="tag-dash">human-rights</kbd>,
+            <kbd translate="no" class="tag-clean">humanrights</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q8458" data-tag-wd-en>Q8458</a> <span class="tag-mylang Q8458"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="ia" data-tag-langs="es,pt" data-tag-wd-es="Q11660" data-tag-wd-en="Q11660">
+
+        <h3 itemprop="name" data-anchor-id="ia">IA</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">IA</kbd>,
+            <kbd translate="no" class="tag-dash">ia</kbd>,
+            <kbd translate="no" class="tag-clean">ia</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q11660" data-tag-wd-es data-tag-wd-pt>Q11660</a> <span class="tag-mylang Q11660"></span></li>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q11660" data-tag-wd-en>Q1142726</a> <span class="tag-mylang Q1142726"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="inteligencia-artificial" data-tag-langs="es,pt">
+        <h3 itemprop="name" data-anchor-id="inteligencia-artificial">Inteligencia Artificial</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">InteligenciaArtificial</kbd>,
+            <kbd translate="no" class="tag-dash">inteligencia-artificial</kbd>,
+            <kbd translate="no" class="tag-clean">inteligenciaartificial</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q11660" data-tag-wd-es data-tag-wd-pt>Q11660</a> <span class="tag-mylang Q11660"></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="lethal-autonomous-weapon" data-tag-langs="en">
+        <h3 itemprop="name" data-anchor-id="lethal-autonomous-weapon">Lethal Autonomous Weapon</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">LethalAutonomousWeapon</kbd>,
+            <kbd translate="no" class="tag-dash">lethal-autonomous-weapon</kbd>,
+            <kbd translate="no" class="tag-clean">lethalautonomousweapon</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q25378861" data-tag-wd-en>Q25378861</a> <span class="tag-mylang Q25378861"></span></li>
+          </ul>
+        </div>
+
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="technological-unemployment" data-tag-langs="en" data-tag-wd-en="Q7692538">
+        <h3 itemprop="name" data-anchor-id="technological-unemployment">Technological Unemployment</h3>
+        <ul>
+          <li>
+            <em lang="eo">Etikedok</em>:
+            <kbd translate="no" class="tag-camelcase">TechnologicalUnemployment</kbd>,
+            <kbd translate="no" class="tag-dash">technological-unemployment</kbd>,
+            <kbd translate="no" class="tag-clean">technologicalunemployment</kbd>
+          </li>
+          <li>
+            <img class="emoji" title=":mag:" alt=":mag:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png"
+              height="20" width="20"> :
+            <strong class="tag-searchlinks"></strong>
+          </li>
+        </ul>
+
+        <p><em lang="eo">Signifo</em>:</p>
+        <div class="tag-signifo">
+          <ul>
+            <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q7692538" data-tag-wd-en>Q7692538</a> <span class="tag-mylang Q7692538"></span></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <section id="wikidata-container">
+      <h2 id="wikidata">Wikidata</h2>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="Q8458">
+        <!-- EN: human rights -->
+        <h3 itemprop="name" data-anchor-id="Q8458">Q8458 <span class="tag-mylang Q8458"></span></h3>
+        <ul>
+          <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q8458">https://www.wikidata.org/wiki/Q8458</a></li>
+        </ul>
+        <div class="wikidata-item-info">
+        </div>
+        <pre class="wikidata-item-raw ais-debug-only">
+        </pre>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="Q11660">
+        <!-- EN: artificial intelligence -->
+        <h3 itemprop="name" data-anchor-id="Q11660">Q11660 <span class="tag-mylang Q11660"></span></h3>
+        <ul>
+          <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q11660">https://www.wikidata.org/wiki/Q11660</a></li>
+        </ul>
+        <div class="wikidata-item-info">
+        </div>
+        <pre class="wikidata-item-raw ais-debug-only">
+        </pre>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="Q7692538">
+        <!-- EN: Technological unemployment -->
+        <h3 itemprop="name" data-anchor-id="Q7692538">Q7692538 <span class="tag-mylang Q7692538"></span></h3>
+        <ul>
+          <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q7692538">https://www.wikidata.org/wiki/Q7692538</a></li>
+        </ul>
+        <div class="wikidata-item-info">
+        </div>
+        <pre class="wikidata-item-raw ais-debug-only">
+        </pre>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="Q1142726">
+        <!-- EN: intelligent agents -->
+        <h3 itemprop="name" data-anchor-id="Q1142726">Q1142726 <span class="tag-mylang Q1142726"></span></h3>
+        <ul>
+          <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q25378861">https://www.wikidata.org/wiki/Q25378861</a></li>
+        </ul>
+        <div class="wikidata-item-info">
+        </div>
+        <pre class="wikidata-item-raw ais-debug-only">
+        </pre>
+      </article>
+
+      <hr>
+
+      <article itemscope itemtype="http://schema.org/Thing" id="Q25378861">
+        <!-- EN: Lethal autonomous weapon -->
+        <h3 itemprop="name" data-anchor-id="Q25378861">Q25378861 <span class="tag-mylang Q25378861"></span></h3>
+        <ul>
+          <li><a itemprop="sameAs" href="https://www.wikidata.org/wiki/Q25378861">https://www.wikidata.org/wiki/Q25378861</a></li>
+        </ul>
+        <div class="wikidata-item-info">
+        </div>
+        <pre class="wikidata-item-raw ais-debug-only">
+        </pre>
+      </article>
+    </section>
+
+    <footer>
+      <h2 id="license">License</h2>
+
+      <p><a href="UNLICENSE" rel="license"><img src="/img/public-domain.png" alt="Public Domain"></a></p>
+
+      <p>To the extent possible under law, <a href="https://github.com/fititnt">Emerson Rocha</a>
+        has waived all copyright and related or neighboring rights to this work to
+        <a rel="license" itemprop="license" href="/UNLICENSE" >Public Domain</a>.</p>
+
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/fititnt/ais-ethics-tags/edit/gh-pages/README.md">Improve
+          this page</a>.
+      </div>
+    </footer>
+
+    <div class="output-test ais-debug-only"></div>
+
+  </div>
+
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+  <script src="{{ '/assets/js/ais-ethics-tags.js' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="
+    crossorigin="anonymous"></script>
+  <script>anchors.add();</script>
+
+</body>
+
+</html>
