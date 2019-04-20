@@ -75,7 +75,7 @@ AISTag.loopTags = function () {
     //console.log('aa', lang);
     AISTag.ToC[lang] = [];
   });
-  console.log(AISTag.ToC);
+  // console.log(AISTag.ToC);
 
   //$('#tags-container > article').each(function(index, element) {
   tagsContainer.forEach(function (element) {
@@ -86,7 +86,7 @@ AISTag.loopTags = function () {
     AISTag.UITagSearchBar(element);
 
     AISTag.state.page.allLanguages.forEach(function(lang) {
-      //console.log('aa', lang);
+      // console.log('AISTag.loopTags', element.id, elCN, lang, wdLangs, elCN.indexOf('tag-lang-' + lang));
       if (elCN.indexOf('tag-lang-' + lang) > -1) {
         let tagTitle = element.querySelector('[itemprop="name"]');
         AISTag.ToC[lang].push({
@@ -168,6 +168,8 @@ AISTag.UIMyTranslations = function () {
 /**
 * Add links to search the tag on external sites
 *
+* @todo this function will not work well if a acronym is also a full meaning in another language. (fititnt, 2019-04-20 04:43 BRT)
+*
 * @param {HTMLElement} el    - Element to populate
 * @param {Array}       langs - All langs that this element could be using
 */
@@ -175,10 +177,6 @@ AISTag.UITagMeaningBar = function (el, langs) {
   let langsDs = langs.map(function (lang) {
     return lang && lang[0].toUpperCase() + lang.slice(1);;
   })
-
-  // console.log('AISTag.UITagMeaningBar', el);
-
-  //let wdInfo = {};
   let wdEls = el.querySelectorAll('[itemprop="sameAs"]');
 
   // For each Wikidata item...
@@ -186,18 +184,25 @@ AISTag.UITagMeaningBar = function (el, langs) {
 
     let html = '<ul>';
 
+    if (wdEls[i].dataset.tagWdAkronimo) {
+      html += '<li>Akronimo</li>';
+      html += '<ul>';
+    }
+
     // For each potential language that this wikidata item could have...
     for (let j = 0; j < langsDs.length; j++) {
       if (wdEls[i].dataset['tagWd' + langsDs[j]]) {
-        html += '<li lang="' + langs[j] + '"><kbd translate="no">' + wdEls[i].dataset['tagWd' + langsDs[j]]+ '</kbd> <sup>(' + langs[j] + ')</sup></li>';
+        html += '<li lang="' + langs[j] + '">' + AISTag.state.page.nameLanguages[langs[j]] + ': <kbd translate="no">' + wdEls[i].dataset['tagWd' + langsDs[j]]+ '</kbd> <sup>(' + langs[j] + ')</sup></li>';
         // console.log('deuuuu')
       }
     }
-    html += '</ul>';
-    // html += 'done';
 
-    // console.log('aaa', wdEls[i]);
-    console.log('AISTag.UITagMeaningBar', el.id, langs, langsDs, wdEls[i].dataset);
+    if (wdEls[i].dataset.tagWdAkronimo) {
+      html += '</ul>';
+    }
+
+    html += '</ul>';
+    // console.log('AISTag.UITagMeaningBar', el.id, wdEls, langs, langsDs);
     
     wdEls[i].parentNode.insertAdjacentHTML('beforeend', html);
   }
@@ -337,11 +342,14 @@ AISTag.vanillaJsonpCallback = function (data) {
  */
 AISTag.whatPageIs = function () {
   let page = {};
+  page.nameLanguages = {};
   //page.availableLanguages = document.querySelector('[property="available-languages"]').content.split(',');
   page.availableLanguages = Array.from(document.querySelectorAll('[data-lang-target]')).map(function (el) {
+    page.nameLanguages[el.lang] = el.dataset.langName;
     return el.lang;
   });
   page.extraLanguages = Array.from(document.querySelectorAll('[data-lang-extra]')).map(function (el) {
+    page.nameLanguages[el.lang] = el.dataset.langName;
     return el.lang;
   });
   page.allLanguages = page.availableLanguages.concat(page.extraLanguages).sort();
@@ -371,7 +379,7 @@ AISTag.whatPageIs = function () {
       for (var key in wdEls[i].dataset) {
         if (wdEls[i].dataset.hasOwnProperty(key)) {
           // console.log('cccc', key, wdEls[i].dataset[key]);
-          if (key.indexOf('tagWd') > -1) {
+          if (key.indexOf('tagWd') > -1 && key.indexOf('tagWdAkronimo') == -1) {
             // console.log('dddd', key, key.replace('tagWd', '').toLocaleLowerCase())
             wdInfo[wdCode][key.replace('tagWd', '').toLocaleLowerCase()] = {};
           }
@@ -404,13 +412,13 @@ AISTag.whatRelations = function () {
   AISTag.state.relations = {
     wkToTags: {}
   };
-  //console.log('AISTag.whatRelations', AISTag.state.relations);
+  // console.log('AISTag.whatRelations1111', AISTag.state.relations.wkToTags);
   //console.log(',,,', AISTag.state.wikidata, AISTag.state.page.tags);
   for (let key in AISTag.state.wikidata) {
     if (AISTag.state.wikidata.hasOwnProperty(key)) {
       for (let i = 0; i < AISTag.state.page.tags.length; ++i) {
         if (AISTag.state.page.tags[i].wikidata[key]) {
-          // console.log('eee1234', AISTag.state.page.tags[i].wikidata[key]);
+          // console.log('eee1234', key, AISTag.state.page.tags[i].wikidata[key]);
           for (let key2 in AISTag.state.page.tags[i].wikidata[key]) {
             if (AISTag.state.page.tags[i].wikidata[key].hasOwnProperty(key2)) {
               if (!AISTag.state.relations.wkToTags[key]) {
@@ -430,6 +438,7 @@ AISTag.whatRelations = function () {
       }
     }
   }
+  // console.log('AISTag.whatRelations3333', AISTag.state.relations);
   return AISTag.state.relations;
 }
 
