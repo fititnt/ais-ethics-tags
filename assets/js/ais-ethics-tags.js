@@ -29,9 +29,9 @@ const AISTag = {
   },
   // Table of Contents
   ToC: {
-    en: [],
-    es: [],
-    pt: []
+    // en: [],
+    // es: [],
+    // pt: []
   }
 };
 
@@ -77,74 +77,41 @@ AISTag.loopTags = function () {
   // For each tag container...
   const tagsContainer = [].slice.call(document.querySelectorAll('#tags-container > article'), 0);
 
+  AISTag.state.page.allLanguages.forEach(function(lang) {
+    //console.log('aa', lang);
+    AISTag.ToC[lang] = [];
+  });
+  console.log(AISTag.ToC);
+
   //$('#tags-container > article').each(function(index, element) {
   tagsContainer.forEach(function (element) {
+    let elCN = element.className;
 
     // Build the search links
-    //AISTag.tagSearchLinks(element);
     AISTag.UITagSearchBar(element);
 
-    // TODO: otimize this 3x copypasta (fititnt, 2019-04-13 06:49 BRT)
-    // if (element.dataset.tagLangs) {
-    if (true) {
-      // console.log('eeee', element, element.classList, element.classList.contains('tag-lang-en'));
-      //if (element.dataset.tagLangs.indexOf('en') > -1) {
-      if (element.classList.contains('tag-lang-en')) {
+    AISTag.state.page.allLanguages.forEach(function(lang) {
+      //console.log('aa', lang);
+      if (elCN.indexOf('tag-lang-' + lang) > -1) {
         let tagTitle = element.querySelector('[itemprop="name"]');
-        AISTag.ToC.en.push({
+        AISTag.ToC[lang].push({
           href: tagTitle.getAttribute('data-anchor-id'),
           title: tagTitle.innerText,
         });
       }
-
-      //if (element.dataset.tagLangs.indexOf('es') > -1) {
-        if (element.classList.contains('tag-lang-es')) {
-        let tagTitle = element.querySelector('[itemprop="name"]');
-        AISTag.ToC.es.push({
-          href: tagTitle.getAttribute('data-anchor-id'),
-          title: tagTitle.innerText,
-        });
-      }
-
-      // if (element.dataset.tagLangs.indexOf('pt') > -1) {
-        if (element.classList.contains('tag-lang-pt')) {
-        let tagTitle = element.querySelector('[itemprop="name"]');
-        AISTag.ToC.pt.push({
-          href: tagTitle.getAttribute('data-anchor-id'),
-          title: tagTitle.innerText,
-        });
-      }
-    }
-
+    });
   });
-  // console.log('eetoc', ToC);
 
-  // TODO: otimize this 3x copypasta (fititnt, 2019-04-13 07:02 BRT)
-  if (AISTag.ToC.en) {
-    let ToCElementEn = document.querySelector('[data-tags-toc="en"]');
-    let ToCElementEnHtml = '';
-    AISTag.ToC.en.forEach(function (el, idx) {
-      ToCElementEnHtml += '<li><a href="#' + AISTag.ToC.en[idx].href + '">' + AISTag.ToC.en[idx].title + '</a></li>';
-    });
-    ToCElementEn.innerHTML = ToCElementEnHtml;
-  }
-  if (AISTag.ToC.es) {
-    let ToCElementEs = document.querySelector('[data-tags-toc="es"]');
-    let ToCElementEsHtml = '';
-    AISTag.ToC.es.forEach(function (el, idx) {
-      ToCElementEsHtml += '<li><a href="#' + AISTag.ToC.es[idx].href + '">' + AISTag.ToC.es[idx].title + '</a></li>';
-    });
-    ToCElementEs.innerHTML = ToCElementEsHtml;
-  }
-  if (AISTag.ToC.pt) {
-    let ToCElementPt = document.querySelector('[data-tags-toc="pt"]');
-    let ToCElementPtHtml = '';
-    AISTag.ToC.pt.forEach(function (el, idx) {
-      ToCElementPtHtml += '<li><a href="#' + AISTag.ToC.pt[idx].href + '">' + AISTag.ToC.pt[idx].title + '</a></li>';
-    });
-    ToCElementPt.innerHTML = ToCElementPtHtml;
-  }
+  AISTag.state.page.allLanguages.forEach(function(lang) {
+    let ToCElement = document.querySelector('[data-tags-toc="' + lang + '"]');
+    let ToCElementHtml = '';
+    // console.log('aaaa', ToCElement);
 
+    AISTag.ToC[lang].forEach(function (el, idx) {
+      ToCElementHtml += '<li><a href="#' + AISTag.ToC[lang][idx].href + '">' + AISTag.ToC[lang][idx].title + '</a></li>';
+    });
+    ToCElement.innerHTML = ToCElementHtml;
+  });
 }
 
 /**
@@ -153,7 +120,7 @@ AISTag.loopTags = function () {
 AISTag.loopWikidata = function () {
   const wks = document.querySelectorAll('#wikidata-container > article');
 
-  console.log('loopWikidata', wks);
+  // console.log('loopWikidata', wks);
 
   for (let i = 0; i < wks.length; ++i) {
     let wdId = wks[i].id;
@@ -334,10 +301,18 @@ AISTag.vanillaJsonpCallback = function (data) {
  */
 AISTag.whatPageIs = function () {
   let page = {};
-  page.availableLanguages = document.querySelector('[property="available-languages"]').content.split(',');
+  //page.availableLanguages = document.querySelector('[property="available-languages"]').content.split(',');
+  page.availableLanguages = Array.from(document.querySelectorAll('[data-lang-target]')).map(function (el) {
+    return el.lang;
+  });
+  page.extraLanguages = Array.from(document.querySelectorAll('[data-lang-extra]')).map(function (el) {
+    return el.lang;
+  });
+  page.allLanguages = page.availableLanguages.concat(page.extraLanguages).sort();
   page.wikidataItems = Array.from(document.querySelectorAll('#wikidata-container > article')).map(function (el) {
     return el.id;
   });
+
   page.tags = Array.from(document.querySelectorAll('#tags-container > article')).map(function (el) {
     //let wdInfo = '@todo';
     let wdInfo = {};
