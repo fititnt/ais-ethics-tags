@@ -2,15 +2,14 @@
  * @license      Public Domain
  * @author       Emerson Rocha <rocha(at)ieee.org>
  * @description  Improve usability of the tags.etica.ai.
+ *
+ *
+ * This work is done with love and special attention to details for the
+ * international community that does not have in English its mother language.
+ * Help with **content** of tags is very welcome. See our GitHub repository at
+ * <https://github.com/fititnt/ais-ethics-tags> or send e-mail to
+ * rocha(at)ieee.org.
  **/
-
-/*
--bf-              _____     ..,----'""`-._
-             _.--' _   ``--..\_.          `-=._   (\_ _
-...______..-'     , >_.-.       \___....-''_   `.--" (O,__,-(   ]b-=,
-    ''----.,.--'"`\__,._\\-...______..|__,__\\-..-.____.____<   _/`(/(
-  Hic sunt dracones
-*/
 
 /**
  * Manage the logic. Also initialize some variables
@@ -141,15 +140,13 @@ AISTag.loopWikidata = function () {
 /**
  * Add translations based on the user preferred languages
  * Depends of wikidata data to work.
- *
- * @TODO change to accept fallback translation based on user preferences (fititnt, 2019-04-15 04:46 BRT)
- *
  */
 AISTag.UIMyTranslations = function () {
   let languages = AISTag.state.user.myLanguages;
   let uiLang = null;
   // languages.push('en'); // fallback... just in case...
   // console.log('AISTag.UIMyTranslations', AISTag.state.user, AISTag.state.page, AISTag.state.wikidata);
+  /*
   for (let i = 0; i < languages.length; ++i) {
     // if (AISTag.state.page.availableLanguages.indexOf(languages[i]) > -1) {
     if (AISTag.state.page.loadLanguages.indexOf(languages[i]) > -1) {
@@ -159,21 +156,26 @@ AISTag.UIMyTranslations = function () {
       console.log('AISTag.UIMyTranslations: sorry, no ' + languages[i] + ' lang');
     }
   }
+  */
 
   for (var key in AISTag.state.wikidata) {
     if (AISTag.state.wikidata.hasOwnProperty(key)) {
       let elsQ = document.querySelectorAll('.' + key);
-      // console.log('elsQ', elsQ);
-      for (let i = 0; i < elsQ.length; ++i) {
-        if (AISTag.state.wikidata[key].labels[uiLang]) {
-          elsQ[i].innerHTML = '<mark lang="' + uiLang + '">' + AISTag.state.wikidata[key].labels[uiLang].value + ' <sup>(' + uiLang + ')</sup></mark>';
-        } else {
-          console.log('AISTag.UIMyTranslations soft fail for key ' + key + ' and uiLang ' + uiLang);
+      // console.log('AISTag.UIMyTranslations elsQ', elsQ, key);
+      // console.log('AISTag.UIMyTranslations elsQ', key);
+      for (let i = 0; i < elsQ.length; i++) {
+        for (let j = 0; j < AISTag.state.page.loadLanguages.length; j++) {
+          let uiLang = AISTag.state.page.loadLanguages[j];
+          if (AISTag.state.wikidata[key].labels[uiLang] && AISTag.state.wikidata[key].labels[uiLang].value) {
+              elsQ[i].innerHTML = '<mark lang="' + uiLang + '">' + AISTag.state.wikidata[key].labels[uiLang].value + ' <sup>(' + uiLang + ')</sup></mark>';
+              break;
+          } else {
+            console.log('AISTag.UIMyTranslations soft fail for key ' + key + ' and uiLang ' + uiLang);
+          }
         }
       }
     }
   }
-  // console.log('AISTag.UIMyTranslations uiLang', uiLang);
 }
 
 /**
@@ -238,7 +240,7 @@ AISTag.UIWikidata = function (el, wkInfo) {
   }
   html += '</ul>';
 
-  console.log(AISTag.state.relations.wkToTags);
+  AISTag.debug && console.log('AISTag.UIWikidata', AISTag.state.relations.wkToTags);
 
   html += '<h4>Wikidata</h4>';
   for (var key in wkInfo.labels) {
