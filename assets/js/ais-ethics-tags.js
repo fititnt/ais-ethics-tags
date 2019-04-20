@@ -151,7 +151,8 @@ AISTag.UIMyTranslations = function () {
   // languages.push('en'); // fallback... just in case...
   // console.log('AISTag.UIMyTranslations', AISTag.state.user, AISTag.state.page, AISTag.state.wikidata);
   for (let i = 0; i < languages.length; ++i) {
-    if (AISTag.state.page.availableLanguages.indexOf(languages[i]) > -1) {
+    // if (AISTag.state.page.availableLanguages.indexOf(languages[i]) > -1) {
+    if (AISTag.state.page.loadLanguages.indexOf(languages[i]) > -1) {
       uiLang = languages[i];
       break
     } else {
@@ -271,7 +272,17 @@ AISTag.UIWikidata = function (el, wkInfo) {
  */
 AISTag.vanillaJsonp = function () {
   let wkItems = AISTag.state.page.wikidataItems.join('|');
-  let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks/urls|labels|aliases|descriptions&callback=AISTag.vanillaJsonpCallback&format=json&ids=' + wkItems;
+  let loadLanguages = AISTag.state.page.loadLanguages.join('|');
+  let loadWikis = AISTag.state.page.loadLanguages.map(function (lang) {
+    return lang + 'wiki';
+  }).join('|');
+  //AISTag.state.page.loadLanguages.forEach(function(lang) {
+  //  loadWikis.push(lang + 'wiki');
+  //});
+  AISTag.debug && console.log('AISTag.vanillaJsonp', wkItems, loadLanguages, loadWikis);
+
+  // let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=en|pt|es|eo&sitefilter=enwiki|eswiki|ptwiki|eowiki&props=sitelinks/urls|labels|aliases|descriptions&callback=AISTag.vanillaJsonpCallback&format=json&ids=' + wkItems;
+  let url2 = 'https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&languages=' + loadLanguages + '&sitefilter=' + loadWikis + '&props=sitelinks/urls|labels|aliases|descriptions&callback=AISTag.vanillaJsonpCallback&format=json&ids=' + wkItems;
   let scriptEl = document.createElement('script');
   scriptEl.setAttribute('src', url2);
   document.body.appendChild(scriptEl);
@@ -309,6 +320,12 @@ AISTag.whatPageIs = function () {
     return el.lang;
   });
   page.allLanguages = page.availableLanguages.concat(page.extraLanguages).sort();
+
+  // page.loadLanguages = AISTag.state.user.myLanguages.concat(page.availableLanguages);
+  page.loadLanguages = AISTag.state.user.myLanguages.concat(page.availableLanguages).filter(function (x, i, a) {
+    return a.indexOf(x) == i;
+  });
+
   page.wikidataItems = Array.from(document.querySelectorAll('#wikidata-container > article')).map(function (el) {
     return el.id;
   });
@@ -394,12 +411,24 @@ AISTag.whatRelations = function () {
 /**
  * What we know about the browser of the intelligent agent accessing our site?
  *
+ * @todo: otimize me.myLanguages to work better with macrolanguages, like chinese
+ *        and arabic; sometimes Wikidata/Wikipedia WILL have a more specific
+ *        language, but at this point we're just using the first part.
+ *        (fititnt, 2019-04-20 00:46 BRT)
+ *
  * @returns {Object}
  */
 AISTag.whoAmI = function () {
   let me = {};
   me.myLanguage = navigator.language || navigator.userLanguage;
-  me.myLanguages = navigator.languages || [me.myLanguage];
+  me.myLanguagesOriginal = navigator.languages || [me.myLanguage];
+  me.myLanguages = [];
+  me.myLanguagesOriginal.forEach(function(lang) {
+    let wdLang = lang.split('-');
+    if (me.myLanguages.indexOf(wdLang[0]) === -1) {
+      me.myLanguages.push(wdLang[0]);
+    }
+  })
   AISTag.state.user = me;
   return me;
 }
