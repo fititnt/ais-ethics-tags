@@ -85,8 +85,11 @@ AISTag.loopTags = function () {
     AISTag.UITagSearchBar(element);
 
     // TODO: otimize this 3x copypasta (fititnt, 2019-04-13 06:49 BRT)
-    if (element.dataset.tagLangs) {
-      if (element.dataset.tagLangs.indexOf('en') > -1) {
+    // if (element.dataset.tagLangs) {
+    if (true) {
+      // console.log('eeee', element, element.classList, element.classList.contains('tag-lang-en'));
+      //if (element.dataset.tagLangs.indexOf('en') > -1) {
+      if (element.classList.contains('tag-lang-en')) {
         let tagTitle = element.querySelector('[itemprop="name"]');
         AISTag.ToC.en.push({
           href: tagTitle.getAttribute('data-anchor-id'),
@@ -94,7 +97,8 @@ AISTag.loopTags = function () {
         });
       }
 
-      if (element.dataset.tagLangs.indexOf('es') > -1) {
+      //if (element.dataset.tagLangs.indexOf('es') > -1) {
+        if (element.classList.contains('tag-lang-es')) {
         let tagTitle = element.querySelector('[itemprop="name"]');
         AISTag.ToC.es.push({
           href: tagTitle.getAttribute('data-anchor-id'),
@@ -102,7 +106,8 @@ AISTag.loopTags = function () {
         });
       }
 
-      if (element.dataset.tagLangs.indexOf('pt') > -1) {
+      // if (element.dataset.tagLangs.indexOf('pt') > -1) {
+        if (element.classList.contains('tag-lang-pt')) {
         let tagTitle = element.querySelector('[itemprop="name"]');
         AISTag.ToC.pt.push({
           href: tagTitle.getAttribute('data-anchor-id'),
@@ -247,7 +252,7 @@ AISTag.UIWikidata = function (el, wkInfo) {
   let html = '<h4>Tags</h4>';
   html += '<ul>';
   if (AISTag.state.relations.wkToTags[el.id]) {
-    console.log('AISTag.UIWikidata asdasdasd', AISTag.state.relations.wkToTags[el.id]);
+    // console.log('AISTag.UIWikidata asdasdasd', AISTag.state.relations.wkToTags[el.id]);
     for (var key in AISTag.state.relations.wkToTags[el.id]) {
       if (AISTag.state.relations.wkToTags[el.id].hasOwnProperty(key)) {
         //html += '<h5>' + key + '</h5>';
@@ -388,7 +393,7 @@ AISTag.whatRelations = function () {
     if (AISTag.state.wikidata.hasOwnProperty(key)) {
       for (let i = 0; i < AISTag.state.page.tags.length; ++i) {
         if (AISTag.state.page.tags[i].wikidata[key]) {
-          console.log('eee1234', AISTag.state.page.tags[i].wikidata[key]);
+          // console.log('eee1234', AISTag.state.page.tags[i].wikidata[key]);
           for (let key2 in AISTag.state.page.tags[i].wikidata[key]) {
             if (AISTag.state.page.tags[i].wikidata[key].hasOwnProperty(key2)) {
               if (!AISTag.state.relations.wkToTags[key]) {
