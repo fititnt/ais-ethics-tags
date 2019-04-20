@@ -28,9 +28,6 @@ const AISTag = {
   },
   // Table of Contents
   ToC: {
-    // en: [],
-    // es: [],
-    // pt: []
   }
 };
 
@@ -68,8 +65,6 @@ AISTag.init = function () {
  * I will offer minimal functionality *even* if the wikidata fail to load.
  * It will not just work if entire javascript fails, but the main HTML already
  * work at least anchors
- *
- * @TODO rewrite to work with more than 3 hardcoded languages (fititnt, 2019-04-18 00:42 BRT)
  */
 AISTag.loopTags = function () {
 
@@ -85,6 +80,7 @@ AISTag.loopTags = function () {
   //$('#tags-container > article').each(function(index, element) {
   tagsContainer.forEach(function (element) {
     let elCN = element.className;
+    let wdLangs = [];
 
     // Build the search links
     AISTag.UITagSearchBar(element);
@@ -97,8 +93,12 @@ AISTag.loopTags = function () {
           href: tagTitle.getAttribute('data-anchor-id'),
           title: tagTitle.innerText,
         });
+        wdLangs.push(lang);
       }
     });
+
+    // Change the signifo part
+    AISTag.UITagMeaningBar(element, wdLangs);
   });
 
   AISTag.state.page.allLanguages.forEach(function(lang) {
@@ -144,19 +144,6 @@ AISTag.loopWikidata = function () {
 AISTag.UIMyTranslations = function () {
   let languages = AISTag.state.user.myLanguages;
   let uiLang = null;
-  // languages.push('en'); // fallback... just in case...
-  // console.log('AISTag.UIMyTranslations', AISTag.state.user, AISTag.state.page, AISTag.state.wikidata);
-  /*
-  for (let i = 0; i < languages.length; ++i) {
-    // if (AISTag.state.page.availableLanguages.indexOf(languages[i]) > -1) {
-    if (AISTag.state.page.loadLanguages.indexOf(languages[i]) > -1) {
-      uiLang = languages[i];
-      break
-    } else {
-      console.log('AISTag.UIMyTranslations: sorry, no ' + languages[i] + ' lang');
-    }
-  }
-  */
 
   for (var key in AISTag.state.wikidata) {
     if (AISTag.state.wikidata.hasOwnProperty(key)) {
@@ -181,6 +168,44 @@ AISTag.UIMyTranslations = function () {
 /**
 * Add links to search the tag on external sites
 *
+* @param {HTMLElement} el    - Element to populate
+* @param {Array}       langs - All langs that this element could be using
+*/
+AISTag.UITagMeaningBar = function (el, langs) {
+  let langsDs = langs.map(function (lang) {
+    return lang && lang[0].toUpperCase() + lang.slice(1);;
+  })
+
+  // console.log('AISTag.UITagMeaningBar', el);
+
+  //let wdInfo = {};
+  let wdEls = el.querySelectorAll('[itemprop="sameAs"]');
+
+  // For each Wikidata item...
+  for (let i = 0; i < wdEls.length; ++i) {
+
+    let html = '<ul>';
+
+    // For each potential language that this wikidata item could have...
+    for (let j = 0; j < langsDs.length; j++) {
+      if (wdEls[i].dataset['tagWd' + langsDs[j]]) {
+        html += '<li lang="' + langs[j] + '"><kbd translate="no">' + wdEls[i].dataset['tagWd' + langsDs[j]]+ '</kbd> <sup>(' + langs[j] + ')</sup></li>';
+        // console.log('deuuuu')
+      }
+    }
+    html += '</ul>';
+    // html += 'done';
+
+    // console.log('aaa', wdEls[i]);
+    console.log('AISTag.UITagMeaningBar', el.id, langs, langsDs, wdEls[i].dataset);
+    
+    wdEls[i].parentNode.insertAdjacentHTML('beforeend', html);
+  }
+}
+
+/**
+* Add links to search the tag on external sites
+*
 * @param {HTMLElement} el - Element to populate
 */
 AISTag.UITagSearchBar = function (el) {
@@ -196,8 +221,6 @@ AISTag.UITagSearchBar = function (el) {
     return false;
   }
 
-  // console.log('eeeee', tagCamelCase, tagDash, tagClean);
-
   let searchLinks = '<a href="https://www.facebook.com/search/posts/?q=%23' + tagCamelCase + '">Facebook</a> | \
   <a href="https://github.com/topics/' + tagDash + '">GitHub</a> | \
   <a href="https://www.instagram.com/explore/tags/' + tagClean + '">Instagram</a> | \
@@ -208,9 +231,9 @@ AISTag.UITagSearchBar = function (el) {
   <a href="https://twitter.com/search?q=%23' + tagCamelCase + '">Twitter</a> | \
   <a href="https://www.youtube.com/results?search_query=%23' + tagCamelCase + '">Youtube</a>';
 
-  // $(el).find('.tag-searchlinks').html(searchLinks);
   el.querySelector('.tag-searchlinks').innerHTML = searchLinks;
 }
+
 
 /**
  * Add extra information to Wikidata section
@@ -240,7 +263,7 @@ AISTag.UIWikidata = function (el, wkInfo) {
   }
   html += '</ul>';
 
-  AISTag.debug && console.log('AISTag.UIWikidata', AISTag.state.relations.wkToTags);
+  // AISTag.debug && console.log('AISTag.UIWikidata', AISTag.state.relations.wkToTags);
 
   html += '<h4>Wikidata</h4>';
   for (var key in wkInfo.labels) {
